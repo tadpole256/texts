@@ -1,0 +1,69 @@
+This was taken from the Autumn issue of 2600...
+
+/* This is a key capturing program using a jGNE filter, for the Macintosh */
+/* This is written to be compiled with THINK C or C++ and should be built */
+/* as a system extension                                                  */
+
+#include <Resources.h>
+#include <Memory.h>
+#include <Events.h>
+#include <SetUpA4.h>
+#include <SysEqu.h>
+static void *gOldJGNE;
+
+static pascal * SetJGNEFilter (void *newFilter)
+{
+        void *result = *(voide **) JGNEFilter;
+        *(long *) JGNEFilter = (long) newFilter;
+        return (result);
+}
+
+static Boolean myGNE (EventRecord *event, Booleab preResult)
+{
+        Boolean postResult = preResult;
+
+        if (event->what == mouseDown)
+                SysBeep (10);
+
+        return (postresult);
+}
+
+static void myJGNE (void)
+{
+        static Boolean inJGNE;
+
+        asm
+        {
+                MOVE.L  A1,A0           ; save event record pointer from GetA4
+                JSR     GetA4           ; point A1 at our A4
+                MOVE.L  A4,-(A7)        ; save old A4
+                MOVE.L  (A1),A4         ; get new A4
+                MOVE.L  A0,AT           ; restore old A1
+                TST.B   inJGNE          ; is myJGNE busy?
+                BNE     @1              ; yes, so bail
+                MOVE.B  #true,inJGNE    ; mark myJGNE busy
+                MOVE.W  D0,-(A7)        ; push pre-result
+                MOVE.L  A1,-(A7)        ; push even record pointer
+                JSR     myJGNE          ; do the real work
+                MOVE.L  (A7)+,A1        ; restore event record pointer
+                ADDQ.L  #2,A7           ; pop pre-result; post result in D0
+                ASL.W   #8,D0           ; bump C boolean to Lisa
+                MOVE.W  D0,8(A7)        ; stash result where caller expects it
+                MOVE.B  #false,inJGNE   ; mark myJGNE not busy @1
+                MOVE.L  (A7)+,A4        ; restore A4
+                MOVE.L  A0,-(A7)        ; return to previous JGNE
+        }
+}
+
+pascal void main (void)
+{
+        void *me;       asm {   MOVE.L  A0,me   }
+
+        RememberA0 ( );
+        SetUpA4 ( );
+
+        DetachResource (RecoverHandle (me));
+        gOldJGNE = SetJGNEFilter (myJGNE);
+
+        RestoreA4 ( );
+}
