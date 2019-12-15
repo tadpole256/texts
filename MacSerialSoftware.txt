@@ -1,0 +1,224 @@
+This is a mini-lecture on writing C programs to use the Serial Driver to
+send and receive using the Macintosh serial port. If at all possible, try to
+use the Serial Driver rather than talking directly to the hardware. It will
+make life simpler. To illustrate the techniques I am using a simple program
+I wrote some years ago when I was playing around with hardware and software
+handshaking. The complete program is included at the end of this page.
+
+Opening the serial port
+
+You have to open the output channel, then the input channel, using
+OpenDriver.
+
+status = OpenDriver("\p.AOut",&outchan);
+status = OpenDriver("\p.AIn",&inchan);
+
+This opens the modem port, if you want to open the printer port substitute
+the names ".BOut" and ".BIn" instead.
+
+Writing to the serial port
+
+Writing is very simple, you tell it how many bytes to write and where the
+bytes are. The only weirdness is that the "count" parameter is passed as
+reference, so it cannot be a literal number. You have to make a "long"
+variable and store into it. This example writes one character.
+
+buff[0] = achar;
+count = 1;
+status = FSWrite(aoutRefNum,&count,buff);
+
+This example writes a bunch of characters.
+
+BlockMove("abcdefghijklmnopqrstuvwxyz\r\n",buff,28);
+count = 28;
+status = FSWrite(aoutRefNum,&count,buff);
+
+Reading from the serial port
+
+If you try to blindly read from the serial port, the Macintosh will hang,
+doing nothing, until those characters are received. To do a non-blocking
+read you should use the SerGetBuf() function, which returns the number of
+characters available to be read. This is an interesting coding sequence for
+processing one character at a time.
+
+status = SerGetBuf(ainRefNum,&count);
+if (0 == count)
+    break;
+count = 1;
+status = FSRead(ainRefNum,&count,cbuff);
+ch = 0x7F & cbuff[0];
+
+The SerGetBuf routine returns the actual number of characters in the read
+buffer, but we only read one of them at a time. Then we strip off the parity
+bit by ANDing with 0x7F.
+
+Changing the settings
+
+Here is an example for turning on hardware or software handshaking
+
+SerShk sconf;
+/* xonoff */
+    sconf.fXOn = 1;
+    sconf.fInX = 1;
+    sconf.xOn = 17;
+    sconf.xOff = 19;
+
+/* hardware
+    sconf.fCTS = 1;
+    sconf.fDTR = 1;
+*/
+status = SerHShake(aoutRefNum,&sconf);
+
+[Note: Inside Macintosh: Devices claims that SerHShake does not honor the
+fDTR flag and that you have to use a low-level CSCODE=14 call to make the
+driver change its DTR flow control enable state. I did not run into this
+during testing, but I will test it when I get a chance. If this turns out to
+be the case I guess I will have to update this example... -zben 7/12/95]
+
+Here is an example for setting the baud rate, parity, etc.
+
+status = SerReset(aoutRefNum,baud1200|stop10|noParity|data8);
+
+Example Program
+
+#include <devices.h>
+#include <files.h>
+#include <fonts.h>
+#include <memory.h>
+#include <menus.h>
+#include <packages.h>
+#include <serial.h>
+#include <types.h>
+#include <windows.h>
+
+WindowPtr windp;
+EventRecord myevent;
+SerShk sconf;
+
+main()
+{
+    short status, inchan, outchan;
+    Rect bounds;
+    char buff[256];
+
+    InitGraf( (Ptr) &qd.thePort );
+    InitFonts();
+    InitWindows();
+    InitMenus();
+    TEInit();
+    InitDialogs(nil);
+    InitCursor();
+
+/* xonoff */
+    sconf.fXOn = 1;
+    sconf.fInX = 1;
+    sconf.xOn = 17;
+    sconf.xOff = 19;
+
+/* hardware
+    sconf.fCTS = 1;
+    sconf.fDTR = 1;
+*/
+    if (noErr != (status=OpenDriver("\p.AOut",&outchan)) ) {
+        NumToString(status,buff);
+        DebugStr(buff);
+        ExitToShell();
+    }
+    if (noErr != (status=OpenDriver("\p.AIn",&inchan)) ) {
+        NumToString(status,buff);
+        DebugStr(buff);
+        ExitToShell();
+    }
+
+    if (noErr != (status=SerHShake(aoutRefNum,&sconf)) ) {
+        NumToString(status,buff);
+        DebugStr(buff);
+        ExitToShell();
+    }
+
+    SetRect(&bounds,100,100,300,300);
+    windp = NewWindow(nil,&bounds,"\pserial",true,documentProc,
+        (WindowPtr)-1, true, 0);
+    SetPort(windp);
+    MoveTo(10,180);
+
+    do {
+        if ( WaitNextEvent(everyEvent,&myevent,2,nil) )
+            if (keyDown == myevent.what) {
+                status = myevent.message & 0x7F;
+                if (3 == status)
+                    muchout();
+                else if ('\b' == status)
+                    ExitToShell();
+                else
+                    sendchar(status);
+            }
+        harvest();
+    } while (true);
+}
+
+harvest()
+{
+    short status;
+    int count;
+    char ch;
+    char cbuff[10];
+    char buff[256];
+    RgnHandle xrgn;
+
+    do {
+        if (noErr != (status=SerGetBuf(ainRefNum,&count)) ) {
+            NumToString(status,buff);
+            DebugStr(buff);
+            ExitToShell();
+        }
+        if (0 == count)
+            break;
+        count = 1;
+        FSRead(ainRefNum,&count,cbuff);
+        ch = 0x7F & cbuff[0];
+        if ('\n' == ch) {
+            xrgn = NewRgn();
+            ScrollRect(&windp->portRect,0,-10,xrgn);
+            DisposeRgn(xrgn);
+            MoveTo(10,180);
+        } else
+            DrawChar(ch);
+   } while (1);
+}
+
+sendchar(int achar)
+{
+    short status;
+    int count;
+    char buff[256];
+
+    buff[0] = achar;
+    count = 1;
+    if (noErr != (status=FSWrite(aoutRefNum,&count,buff)) ) {
+        NumToString(status,buff);
+        DebugStr(buff);
+    }
+}
+
+muchout()
+{
+    short contl, status;
+    int count;
+    char buff[256];
+
+    BlockMove("abcdefghijklmnopqrstuvwxyz\r\n",buff,28);
+    for (contl=0; contl<1000; contl++) {
+        count = 28;
+        if (noErr != (status=FSWrite(aoutRefNum,&count,buff)) ) {
+            NumToString(status,buff);
+            DebugStr(buff);
+            contl = 1000;
+        }
+    }
+}
+
+You might find more interesting information in Macintosh Technical Notes
+HW4, HW545, DV11, DV16, and DV555.
+----------------------------------------------------------------------------
+Back to ZBEN's home page.

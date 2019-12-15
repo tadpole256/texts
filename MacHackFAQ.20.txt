@@ -1,0 +1,1757 @@
++-------------------------------------------------------------------mh<DoH!>-+
+| M______.  A______.  C______.     H____.    A______.  C______.  K____.      |
+|  )     :\  )     :\  )     :\     )   / /\  )     :\  )     :\  )   / /\/\ |
+| /       :\/   /\  :\/   /\__/_   /   /__\:\/   /\  :\/   /\__/_/   /_/   / |
+|/   /  \  :\  /  \  :\   \_\  :\ /   ____  :\  /  \  :\   \_\  :\  .__.  :\ |
+|\___\__/______\   \____________/ \___\  /______\   \_______________\   \___\|
++--------------------------------------S.ssSS88$$s----S-S----,ssSS88$$8s-----+
+ Contributors: AX1P, Filbert,          S8   '"~$$~    S8 8S   8$$8S"~~~$8S
+ Observer, Maddog Hoek, oleBuzzard,   S8             S8   8S  S8$$      ~8S
+ Armchair Hacker, ArcAngel, Nganon   S8$.ssSS88$$s  S8$   $8S  S8$$      $8S
+ DATE -=> 04-MARCH-1996             S8$    '"~$$~  S8$.sss.$8S  S8$       $8S
+ ______kn0wledge phreak BBS______  S8$$           S8$$'"~"'$$8S  S8$      $$8S
+  New home of MHFAQ 719.578.8288  S8$$           S8$$       $$8S  S8s  $   $$8S
+   WebSite: http://iti2.net/k0p  S8$$$          S8$$$  ver  $$$8S  S8s $$ s$$$8
+       e-mail: k0p@iti2.net       ~$~            ~$~   2.0   ~$~    ~S8$$$Ss~$~
+======================================================================$$$$====
+                                                                      ~~#$
+
+00. Introduction to the MacHackFAQ v2.0
+
+
+SECTION I: SOFTWARE DEPROTECTION/'CRACKING'
+-------------------------------------------
+01. What is MACSBUG?
+02. Where can I find MacsBug?
+03. How do you use MacsBug?
+04. How can I use MacsBug to crack software?
+05. What are some other useful MacsBug related resources?
+
+
+SECTION II: SYSTEMS HACKING
+---------------------------
+06. What are some general techniques for defeating Macintosh Security?
+07. What are some general tools for defeating Macintosh Security?
+08. How can I Hack At Ease?
+09. How can I use DisEase to Hack At Ease?
+10. Where can I find DisEase?
+11. How can I Hack FoolProof?
+12. How do I access the Chooser when it is protected on Foolproof? 
+13. How can I defeat Passworded Control Panels?
+14. How can I defeat the DeskTracy Control Panel (at Kinko's)?
+15. What is EtherNet or Packet Sniffing?
+16. How can I EtherNet Sniff on the Mac?
+17. How can I defeat a FileGuard protected system?
+
+
+SECTION III: SYSTEMS HACKING
+----------------------------
+18. How Can I hack FirstClass?
+19. What is UNIX Password Hacking?
+20. How Can I do it on the Mac?
+
+
+SECTION IV: PHREAKING
+---------------------
+21. What is phreaking?
+22. What are some phreaking warez for Macs?
+23. How can I use these programs?
+
+
+SECTION V: MAC UNDERGROUND RESOURCES
+------------------------------------
+24. What are some Sites of interest to Mac Hackers?
+25. What are some Warez of Interest to Mac Hackers?
+
+
+SECTION VI: MAC HACK TIDBITS
+----------------------------
+26. How do I copy a read-only file?
+27. Where can I get the latest version of macpgp and the source code? 
+28. How can I convert a Read Only text file?
+29. How can I Disable Extension Disabling on my Mac?
+30. Is there a way to disable the Power-down Button
+31. Is there a way to turn off zoomrects in System 7?
+
+32. Outro
+
+=============================================================================
+
+00. Introduction to the MacHackFAQ v2.0
+
+Welcome to the MacHackFAQ v2.0! This thing has been awhile in the making, but 
+I think I've revamped it to a level that I can work with. I'd like to be able 
+to put out new FAQs at least every three months, the greatest determinor of 
+that will be the volume of article submissions. To start this FAQ off, heres 
+some House Cleaning issues:
+
+Contributors--Contributors this month are: Observer, Maddog Hoek, Voyager, 
+ArcAngel, AX1P, Spooty, Filbert, The Jackal, Mark O'Connel, Nganon, me 
+(oleBuzzard). Thanx to everyone who contributed. My apologies to anyone who 
+contributed that I failed to acknowledge.
+
+MacHack FAQ Header--This additions Header was created by Maddog Hoek. If you 
+are an ASCII artist, and would like to submit a Header for upcoming FAQs 
+please contact me.
+
+Home of the FAQ--An html versions of the FAQ can be found at kn0wledge phreak 
+WWW page. Text versions of MacHack FAQ can be found at kn0wledge phreak WWW 
+page or kn0wledge phreak BBS
+
+Submissions, Corrections, Praises, Complaints, Suggestions--If you want to 
+contact me regarding any of the following, please feel free to e-mail me. 
+Please label your subject as one of the five subjects.
+
+Addresses--I kept saying you could contact me, I supposed you'd like to know 
+where.
+
+oleBuzzard's E-mail Address: k0p@iti2.net
+  kn0wledge Phreak WWW Page: http://iti2.net/k0p
+       kn0wledge phreak BBS: 719-578-8288
+
+
+SECTION I: SOFTWARE DEPROTECTION/'CRACKING'
+-------------------------------------------
+
+01. What is MACSBUG?
+
+MacsBug is an acronym for Motorola advanced computer systems deBugger. It is 
+an assembly-language-level debugging tool for the Macintosh and Power 
+Macintosh computers. MacsBug was written by Motorola (creator of the 68000 
+series chip) to aid programmer's in development of Macintosh software. The 
+versatility of MacsBug also makes it a very useful tool for software 
+deprotection.
+
+
+02. Where can I find MacsBug?
+
+MacsBug can be found at the Apple Corporation FTP Support Site:
+
+  
+http://www.support.apple.com/pub/Apple%20SW%20Updates/US/Macintosh/Utilities
+
+
+03. How do you use MacsBug?
+
+The answer comes from Observer in an Original piece written for the FAQ:
+
+Macsbug for Fun and Profit
+Macsbug is an awesome program published by Apple and available for free. It's 
+used by programmers to debug their programs, and crackers to help them in 
+their work. Macsbug (MB) is what's called a "low-level debugger." This is 
+because it works at a very low level--in other words, looking at the actual 
+instructions being executed by the computer. Currently, the latest version of 
+MB is 6.5.2.
+
+Installing Macsbug is easy. Drop it in your System Folder and restart. Don't 
+double click on it, don't put it in the Extensions folder, don't try to give 
+it more memory--just put it in the System Folder and let it be. The next time 
+you restart, the message "Debugger installed" will accompany your normal 
+Welcome to Macintosh message. This confirms that Macsbug is loaded.
+
+To stop processing and enter Macsbug (called breaking into Macsbug), press 
+the interrupt button on your Mac. This is a small button with a circle on it. 
+Inside the circle is a little squiggly line that looks sort of like an EKG 
+(sometimes it's just a circle, though). It will often be accompanied by an 
+adjacent small button with a triangle in it. This is the reset button.
+
+Anyway, press the interrupt button, and Macsbug will appear. If your computer 
+is one of those without hardware reset/interrupt buttons, press cmd-power. 
+(cmd-ctrl-power is the equivalent of the reset button.)
+
+Macsbug makes you look very cool when you use it. This is because it looks 
+like sheer hell to anyone who doesn't know how to interpret what it gives 
+you. What does it give you? Here's an ASCII picture of a MB screen: (view in 
+Monaco)
+___________________________________________________________________
+|    SP      |                                                    |
+|  nnnnnn    |                                                    |
+|            |                                                    |
+| CurApName  |                                                    |
+| SimpleText |                                                    |
+|            |                                                    |
+| 32-bit RM  |             [previously executed                   |
+| SR SmxNZvc |              instructions, plus                    |
+|            |              output generated by                   |
+| D0 nnnnnn  |              your commands, show up                |
+| [...]      |              here]                                 |
+| D6 nnnnnn  |                                                    |
+| D7 nnnnnn  |                                                    |
+|            |____________________________________________________|
+|            | [proc name]                  ; will branch         |
+| A0 nnnnnn  |   +nnnn     nnnnnn   BCC.S          | 641A         |
+| [...]      |   +nnnn     nnnnnn € MOVE.L         | 2008         |
+| A7 nnnnnn  |   +nnnn     nnnnnn   CLR.W          | 4267         |
+|____________|_____________________________________|______________|
+
+Whoa! What the HELL is all this stuff? (And who in the world uses it?) 
+Basically, unless you're using assembly language on the Mac (as a programmer 
+or cracker, for example), you don't need to know what all this stuff means. 
+For the benefit of those who care, however, here you go. (Other people, skip 
+down to the next section.)
+
+SP
+Stack Pointer. Not too important except for programmers/crackers.
+
+CurApName
+The name of the currently running application. This is NOT (NOT NOT 
+NOT)not the frontmost application! Many times it will not be. To ensure 
+that an application will be running when you break into macsbug, hold down 
+one of its menus.
+
+32-bit RM
+Indicates whether you are in 32 or 24 bit memory mode (on any modern Mac will 
+always be 32)fairly  and whether you're using Real Memory or Virtual 
+Memory.
+
+D0-D7, A0-A7: Data and address registers on the 680x0 chip, where data is 
+sometimes stored.
+
+[proc name]
+The name of the subprogram which is being executed, or "no procedure name" if 
+none is available. If ResEdit/Resorcerer tell you the name of a subprogram is 
+something line "<Anon_17>," MB just says "no procedure name."
+
+; will branch
+If the next instruction to be executed (the instruction directly below the 
+procedure name) is a branch, this will pop up and say whether or not the 
+branch will occur.
+
++nnnn
+The offset within the current procedure of the instruction on that line.
+
+nnnnnn
+The absolute address in memory of the instruction on that line.
+
+€
+Shows up if there's a breakpoint set on an instruction. Unless you're setting 
+breakpoints, you won't get any of these.
+
+BCC.S, MOVE.L, etc.
+The next assembly instructions which will be executed.
+
+641A, 2008, etc.
+The hex equivalent of these instructions.
+
+
+And that's about it. There are lots of worthwhile things you can do in 
+Macsbug without understanding all this stuff, though.
+
+es
+Exit to Shell. Attempts to quit the current program and go back to the 
+finder. If you crash and use this, it's best to restart the computer ASAP.
+
+rs
+ReStart. Useful if you crash and can't use es, but don't want to do a 
+hardware restart. Better than turning the computer off, because it unmounts 
+mounted volumes.
+
+rb
+ReBoot. Same as rs, but doesn't unmount mounted volumes. This makes it more 
+or less the same as turning the computer off and then back on, or hitting a 
+hardware reset button.
+
+help <topic | command>
+Displays help for the specified topic or command. To see a list of topics, 
+just type "help".
+
+Base 10 <-> Base 16 (hex) <-> ASCII conversion
+Enter a number preceded by # for decimal, $ for hex, or in single quotes 
+(i.e. 'q') for ASCII. Hit return. What pops up is the hex, decimal and ASCII 
+equivalent! Nifty, eh?
+
+Error ID lookup
+Crashed and want to know just what an error -43 is? Break into Macsbug and 
+type:
+
+error #(error ID in base 10)
+
+and Macsbug will tell you what the error means.
+
+A calculator!
+Macsbug can perform mathematical operations, such as *, +, -, /, even between 
+number systems!
+
+
+You can also do some fun stuff with Macsbug:
+
+sw menuflash [hexadecimal number 1-FFFF]
+Sets the number of times a menu item flashes when selected. If you set this 
+over 50 or so, be prepared to be very patient!
+
+Strobe light
+Type "swap". Macsbug will say "Display will be swapped after each trace or 
+step." Now type "s 20" and hit return. Ooooh!! Aaaah!! Make the number bigger 
+if you like, but be patient... Type swap again to end the process.
+
+
+And in case it ever comes up in Trivial Pursuit:
+The name Macsbug has nothing to do with Macs. It is an acronym for Motorola 
+Advanced Computing Systems deBUGger. If Apple had called their computers 
+Donuts, Macsbug would still be called Macsbug. (Motorola comes in, for those 
+who don't know, because Motorola makes the 680x0 chips which were the heart 
+of every Mac until the PowerPC, which is still made by Motorola.)
+
+For Andy Ihnatko's typically unique spin (I mean that kindly, Andy) on 
+Macsbug, check out the last page of the Feb 96 MacUser. If you're a Mac 
+programmer and want to know how to use Macsbug to examine your programs, 
+check out _Debugging Macintosh Software with Macsbug_, by Othmer and Straus. 
+For information on how to use Macsbug itself, Apple publishes a manual which 
+costs about $30.
+
+
+04. How can I use MacsBug to crack software?
+
+"How do I get blahblahware to stop asking me to register?"
+(Also known as, "Will someone give me a crack to blahblahware?")
+
+Intro...
+Cracking software is a huge topic--not always difficult, but one with many 
+different aspects, all of which can be important. This is just the first step 
+down a long road, and I urge anyone interested in truly learning about 
+cracking to check out the "Further Reading" section at the bottom. Also, the 
+first two appendixes (glossary and assembly reference) aren't meant as 
+afterthoughts but as important parts of the text. Use them. Appendix 3 is 
+useful if you want Resorcerer (which you do).
+
+
+Background...
+Anyone who's written a few real Mac applications (or one big one) in Pascal, 
+C, or any similar language is a good candidate to become a Mac cracker. 
+However far down from there you rank yourself, is how much harder it's going 
+to be for you to crack software. Try if you like, but knowing how to program 
+is useful if you want to modify programs.
+
+If you're freaked out about assembly language, don't be; a decent programmer 
+in Pascal or C can acquire a fluency in assembly fairly easily. All your 
+friends from the Toolbox exist in assembly, just with an underscore ("_") 
+before their names. And we call them traps, rather than calls. But other than 
+that they're pretty much the same. And lots of cracking is just changing 
+branches, like changing conditions in an "if" statement. Nothing too hairy, 
+right?
+
+People generally write programs in what's called a high-level language, a 
+language that's far from what the computer actually does but is easy for a 
+human to remember and work with. HyperTalk is a very high-level language. 
+Pascal and C are another notch or two down the line. In order for the 
+computer to run programs written in these high-level languages, you need a 
+compiler. This is a program which translates what you've written in Pascal 
+(gibberish to the computer), into assembly language, the specific 
+instructions which the CPU will execute to run your program. So when you open 
+a program and look at its CODE resources, you're looking at some 
+representation of the actual instructions the computer follows to run that 
+program.
+
+
+The Hunt...
+Note I said some representation. If you're using ResEdit, all you'll see is 
+the code in hexadecimal. This doesn't do you much good. To view it as its 
+assembly code equivalent, either spring for Resorcerer (a $256 ResEdit done 
+right), or get the ResEdit CODE Editor, which is free and publicly available. 
+Once you install the resources in the CODE Editor into your ResEdit 
+application, when you open a CODE resource, you'll see something like this 
+(and also get some new menus):
+
+Offset     Addr      Opcode        Operand          Comment
+===========================================================
+
+Here's what this all means:
+
+Offset
+The line number in bytes, counting from the beginning of the CODE 
+resource segment
+
+Addr
+The line number, counting from the beginning of the current 
+procedure/subprogram
+
+Opcode
+The assembly instruction to execute
+
+Operand
+Data which accompanies the instruction (parameters)
+
+Comment
+Misc. info on a line of code, plus hex representation of the line
+
+All this exists in Resorcerer as well, just with slightly different names. To 
+toggle between viewing absolute and relative offsets in Resorcerer, press 
+cmd-2 while viewing a CODE resource.
+
+Go to the "Modules" (Routines in Resorcerer) menu. There you'll find a list, 
+in the order they exist in the code, of all of the procedures in that code 
+segment. (Happy Resorcerer users will have this menu alphabetized.) Find a 
+program which has more than anon1, anon2, etc. Procedure names are a huge 
+help to a cracker, because let's say you want to remove a registration dialog 
+box--which catches your eye more, "DoRegDialog," or "anon36?"
+
+So you have your program. Let's say what's annoying you is that it always 
+shows a dialog which you can't dismiss for a few seconds, until it enables 
+the OK button.
+
+Go look at the program's DLOG resources and find the dialog you want to 
+avoid. If it isn't there, check out the WIND resources as well. Convert the 
+dialog/window's ID number into hex. If you can't do this manually, Resorcerer 
+can do it for you, or else find one of the many shareware calculators that 
+has the capability. Also, TI-85 owners can just punch go into the mode 
+settings and set it to use hex. Never thought that thing would come in handy, 
+did you?
+
+Anyway. Search for this value in the code, just a few lines before a call to 
+the _GetNewDialog trap. (Cmd-G in Resorcerer, or hold down option when 
+opening the CODE resource in ResEdit and use ResEdit's search tools.) Here's 
+a sample from an actual application, whose nag dialog is DLOG ID #9990=$2706:
+
+move.w    #$2706,-(sp)
+clr.l     -(sp)
+pea       -$0001
+_GetNewDialog
+
+
+What's this doing? It's MOVEing the hex number $2706 to "sp." This is the 
+Stack Pointer, a place where things are stored temporarily--typically 
+parameters passed to a procedure or function, and afterwards what it returns. 
+Sure enough, the next line is:
+movea.l   (sp)+,a4
+
+This is where we move the DialogPtr given to us by _GetNewDialog, off of the 
+stack pointer and put its address in register A4. (We know GetNewDialog 
+returns a DialogPtr because we bought the Inside Mac CD while we were doing 
+Mac programming in a high-level language. I wasn't kidding when I said Mac 
+programming experience would help.)
+
+
+The Kill...
+OK, so now we know where the dialog is loaded. And, because we've used 
+dialogs in a higher-level language before, we know that other toolbox 
+calls--ModalDialog and CloseDialog for example--tend to accompany a 
+GetNewDialog call. Further, the problem we wish to overcome is that it stops 
+for a few seconds before enabling the OK button. This implicates another 
+likely accomplice, HiliteControl, which is used to enable and disable dialog 
+items.
+
+Let's say the programmer was a jerk and left the subprogram names in the 
+code. Maybe the subprogram you found the dialog in is called "DoNagBox." If 
+it's this obvious, you could try NOP'ing the entire DoNagBox subprogram. Note 
+that while this is easy in Resorcerer, it is very difficult in ResEdit.
+
+Maybe that doesn't work. Maybe that makes the program crash. OK, time to try 
+something else. While the nag box is open, break into Macsbug (read about 
+that in another section of the FAQ) and type "atb closedialog". This will 
+cause Macsbug to interrupt processing when a call to the _CloseDialog trap is 
+made. Dismiss the nag dialog, and poof, you're in Macsbug. Use the "t" 
+command to step through the code, through the subprogram which holds the 
+_GetNewDialog for the nag box. When you hit an "rts," keep going--the next 
+line will be the line after the line which calls the nag subprogram. Here's a 
+little diagram:
+
+                 /-> doNagBox
+                /      [other assembly]
+[assembly]     /       move.w $2706, -(sp)
+              /        _GetNewDialog
+jsr doNagBox /         [more assembly]
+
+[more assembly]<---\   _CloseDialog
+                    \  [still more assembly]
+                     \-rts
+
+We reach "jsr doNagBox," which sends us off to the doNagBox subprogram. This 
+puts up a dialog and then closes it when we hit a button. When all this has 
+been done, we're returned to the line of code immediately following the "jsr 
+doNagBox" line. Just like any other language.
+
+We could NOP the "jsr doNagBox," but that tends to be asking for trouble; any 
+parameters passed to or received from the subprogram are left wandering 
+around, which will probably cause a crash. What we should look for are 
+branches, probably beq or bne. Is there one of these above the jsr which 
+skips down just a few lines past the jsr? If so, try changing the condition 
+of this branch (such as beq->bra).
+
+
+Other Techniques
+The idea of looking for a dialog's ID is one which frequently works. However, 
+there are other limitations you might want to overcome. Here are some ideas 
+for other program limitations:
+Only works for x minutes, then quits
+Look for the _TickCount trap (hex A975) in the code--this is the most common 
+method of doing this. Something else to watch for is _ExitToShell, (hex 
+A9F4), which MAY be the way the program quits itself. If the subprogram names 
+are in the code, look especially hard at anything resembling "eventloop," 
+"mainloop," etc.
+
+Only works for a week
+Look for the _SecondsToDate (hex A9C6) trap, and a branch a while after it. 
+Also, if a dialog pops up to tell you to register, look for the ID of this 
+dialog.
+
+Only lets you play the first x levels
+Several possibilities here. If a dialog appears when you reach a higher 
+level, the easiest is to search for the dialog ID in the code. If it quits, 
+look for _ExitToShell. If you absolutely can't find what you're looking for, 
+search for the highest possible level number in the code. (If you can only 
+play levels 1-4, search for $0004.) If this shows up in or near some form of 
+cmp, you may have struck paydirt.
+
+
+Practice, Practice, Practice
+With just a few months of practice, you'll be surprised at how many things 
+you can crack in less than an hour. Here are some things you can try looking 
+at, in order of difficulty: (easiest->hardest)
+Relax 1.0 (any shareware site)
+GraphicConverter 1.7.7 /1 (ditto)
+Warcraft 1.0
+Net Watchman demo (ftp.aggroup.com) (don't worry about printing)
+GopherGolf 2.0.7 (shareware again)
+DragStrip 1.2.4
+
+(Note: Some of these are commercial software. These cracks should only be 
+attempted on software you own, and for your own convenience.)
+
+
+Appendix 1: Glossary
+Branch:
+Each command in assembly has an offset, essentially a line number. Branching 
+to an offset sets the PC to the specified offset and then continues execution 
+normally.
+
+Byte, word, long word:
+The most common data sizes. Use monaco for the table below:
+        Bits   Hex digits    Range (decimal)
+Byte  |   8        2         0-255
+Word  |  16        4        0-65535
+LWord |  32        8      0-4294967295
+
+These can be halved to alter the range to include negative values. So a byte 
+can also be used to go from #-127 to #127, a word from #-32767 to #32767, and 
+so on. In a long word (for example) this is accomplished by going from $0 to 
+$7FFF (#0-#32767) normally. $8000 is then equal to #-32767, up to $FFFF=#-1. 
+The same system is used for the other data sizes as well.
+
+Flags:
+There are five status flags: Z, C, N, V, X. These keep track of the results 
+of operations. Conditional branches such as bne and beq check the flags to 
+decide whether or not to branch.
+Z: Zero flag. Set if the result of an operation is zero, or if two compared 
+values are equal. Cleared otherwise.
+C: Carry flag. Set if the a math operation produced a digit carry (i.e. 
+$FF+$1)
+N: Negative flag. Set if the result of a math operation is negative, or the 
+most significant (rightmost) bit in a number is true.
+V: Overflow flag. Set if an operation's result can't be held in the data 
+provided (such as $FF+$1 in a byte). Not too common.
+X: Extended flag. Used for precision in math operations. Also not too common.
+
+Hexadecimal:
+Usually referred to as hex. This is base 16. Our number system is base 10 
+(aka decimal), which means each column is ten times the previous one. In hex, 
+you start with the ones column, then you have a sixteens column, then a 256's 
+column, and so on. Hex is just like our normal system, except you count to 15 
+before going to the next place. The extra 6 numbers you need for this are 
+provided by the letters A-F. So counting in hex goes like this:
+1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,10,11,12,13,14,15,16,17,18,19,1A,1B,1C,1D,1E,1F,
+20,21...
+ The signs # and $ are used to indicate decimal (base 10) and hexadecimal, 
+respectively. So #10=$A; (#15+#1)=($F+$1)=$10; #255=$FF; and so on.
+Two hexadecimal digits are equivalent to eight bits, or one byte.
+
+Registers:
+680x0 chips have 16 registers, which are places to hold data (essentially a 
+variable in higher-level languages). These are divided into 8 data registers, 
+labeled D0-D7, and 8 address registers, labeled A0-A7. Each register can hold 
+a long word. The address and data registers are themselves identical, but 
+there are commands which can be used on address registers which cannot be 
+used on data registers.
+
+Subprogram/Subroutine/Procedure/Function:
+Used more or less interchangeably. If used specifically, they mean the same 
+thing they would in a high-level language.
+
+
+Appendix 2: Quick Assembly Instruction Reference
+This is a brief description of the most common commands in assembly language. 
+There are many others however, and anyone seriously wanting to learn how to 
+crack will soon need more than this. See the "further reading" section for 
+suggestions.
+Suffixes: .b, .w, .l
+Indicates that the suffixed instruction will apply to a Byte, Word, or Long 
+word, respectively. So cmp.b will compare two bytes.
+
+add
+ADDs two values, and stores the result in the second operand. The Z flag is 
+set if the result was zero, cleared otherwise.
+
+beq
+Branch if EQual. Branches if Z flag is set. 67 hex.
+
+bne
+Branch if Not Equal. Branch if the Z flag is clear. 66 hex.
+
+bra
+BRanch Always. Move PC to the indicated offset and continue. 60 hex.
+
+clr
+CLeaR. Sets its operand to zero.
+
+cmp
+CoMPares two values. If the values are equal then the Z flag is set. 
+Otherwise it is cleared.
+
+jsr/rts
+Jump SubRoutine. Exactly like calling a procedure or function in a high-level 
+language: sets PC to the subprogram's address, but first puts the PC's 
+current value on the stack. When the specified subprogram is completed, the 
+rts ("ReTurn from Subroutine") command will be used to return to where the 
+subprogram was called.
+
+link/unlk
+LINK/UNLinK. Generally used to create local variables for subprograms. (Link 
+creates, unlink disposes at end of subprogram.)
+
+move
+MOVEs the first operand into the second. When you see something like (A2), it 
+means that the data stored in the address held in A2 is being used. A2 
+without the parentheses means the actual data held in A2.
+
+nop
+No OPeration. Useful for simply deleting code without changing the location 
+in memory of other code. 4E71 hex.
+
+sub
+SUBtract. Same as add, but subtracts the first operand from the second.
+
+
+Appendix 3: Ordering Resorcerer, a cracker's best friend
+The single-copy price of Resorcerer is US $256 (decimal!).  We also offer 
+quantity, reseller, and educational discounts at anywhere between 20% and 50% 
+off of the above price.  Please call us for more information and a quote.
+
+Our mailing address is:
+Mathemaesthetics, Inc.
+P.O. Box 298
+Boulder, CO, 80306-0298
+Phone: (303) 440-0707
+Fax:		 (303) 440-0504
+
+Internet: resorcerer@aol.com
+
+
+Appendix 4: FURTHER READING
+Surprise surprise, a few pages aren't enough to teach you assembly language. 
+For more information, check out these sources...
+Files by The Shepherd and Vassal
+Each of these guys has written a much bigger file on Mac cracking. The 
+Shepherd's is the larger one and better for the beginner (and a great file in 
+general), Vassal's offers more specific technique tips. I used the Shepherd's 
+file as a reference for the assembly reference section here.
+
+Basic MacCracking files
+I've written a few files which describe how to crack specific programs. Of 
+course I'm biased, but I think these are all very helpful to beginners, 
+especially since they were written as I learned things myself.
+
+Fantasm's help files
+Fantasm is an assembly language development program, for the sickos who 
+actually create whole programs in assembly language. While using the program 
+itself has been shown to cause severe social problems, it comes with six 
+large files written to teach someone how to write assembly language. These 
+aren't something anyone serious about this stuff should pass up.
+
+Debugging Macintosh Software with Macsbug
+Macsbug in invaluable to a cracker. I would be shot if I took the space to 
+describe how to use it here, but it's not that hard to figure out. What is 
+hard is discovering how to use it in the context of a Macintosh (i.e. where 
+is the event record that _waitnextevent just got?), and this book tells you 
+all of that.
+
+Macsbug Reference and Debugging Guide
+Apple's Macsbug documentation, plus EXCELLENT assembly tutorial. Another one 
+serious folks shouldn't miss out on.
+
+
+05. What are some other useful MacsBug related resources?
+
+
+DBugr 1.2.1...........Puts a floating bomb on your desktop that you can click 
+
+                      on at any time to enter macs bug. Widely available. 
+                      http://vsl.cnet.com. Search: 'macsbug'
+
+Break Before..........Break into MacsBug on the very first instruction of the 
+
+                      INIT code of ANY extension you choose. Widely 
+available. 
+                      http://vsl.cnet.com. Search 'macsbug'
+
+Debugger F-Key........Drop into the debugger. Recognizes MacsBug, TMON, The 
+                      Debugger, and ABZmon. Will also recognize any new 
+                      debuggers that follow Apple's debugger protocol as 
+                      documented in the "MacsBug Reference and Debugging 
+                      Guide." http://vsl.cnet.com. Search 'macsbug'
+
+Cool MacsBug Tricks...Cool things you can do with MacsBug. 
+                      http://www.biddeford.com/~benyc/Macsbug.html
+
+Tips for MacsBug......Place to obtain and submit MacsBug programming tips. 
+                      http://www.scruznet.com/~crawford/Computers/macsbug.html
+
+
+
+SECTION II: SYSTEMS HACKING
+---------------------------
+
+06. What are some general techniques for defeating Macintosh Security?
+
+Here are a few:
+
+  * Restart a system with the Shift-key down to disable extensions.
+  * Restart with the built-in ROM Disk available on some Macs. Hold:
+    Command-Option-x-o during boot-up. 
+  * Boot from a floppy. Even if floppy startup has been disabled, you should 
+    be able to force it by holding down the command-option-shift-delete key 
+    combo to boot the floppy. This key combo won't let the internal hard 
+    drive mount.
+
+07. What are some general tools for defeating Macintosh Security?
+
+MUST HAVES for defeating Secured Macs are Keystroke Recorders, file wipers 
+and the System 7.5 Disk Tools. 
+
+Keystroke Recorders--Keystroke Recorders are normally Control Panels, which 
+when activated, will record every keystroke made on a system. In many cases 
+the log containing all of the Keystroks is stored in a covert place for later 
+retreival. A few keystroke recorders are:
+
+  Invisible Oasis.......http://wheel.dcn.davis.ca.us/~sean/hack/hack.html
+  MacLife Insurance.....http://vsl.cnet.com. Search: 'maclifeinsurance'
+  SuperSave 1.x.........http://vsl.cnet.com. Search: 'super save'
+
+File Wipers--File wipers are utilities that can remove a file from a Hard 
+Disks by physically writing over it. Many files are protected against 
+deletion by the prevention of routines which allow their altering. File 
+wipers can circumvent this protection because they don't perform the routines 
+involved in altering a file, instead they just write over the file with null 
+data. As a result the file is eliminated and thereby rendered NON-FUNCTIONAL. 
+This makes them a very valuable in defeating Macintosh security. File wipers 
+have the ability to wipe: locked file, protected files, running programs, the 
+system folder, themselves, anything. A few file wipers are:
+
+  Burn 2.2.............http://vsl.cnet.com. Search: 'Burn'
+  Flame File v1.5.8....http://vsl.cnet.com. Search: 'flamefile'
+  Obliterate v1.1......http://vsl.cnet.com. Search: 'Obliterate'
+  The Eraser 2.0.0.....ftp://ftp.euro.net/Mac/info-mac/disk/eraser-20.hqx
+  
+
+System 7.5 Disk Tools--System 7.5 Disk Tools contains a Finder and 
+Mini-System on a single 1.44 HD Floppy thereby alllowing you to boot from the 
+Floppy Drive. The 7.5 Disk Tools are a part of the System 7.5.
+
+
+08. How can I Hack At Ease?
+
+There are numerous ways to Hack At Ease. Here are a Few:
+
+Programmer's Switch--Hit the programmer's switch (see section on MacsBug) and 
+type: G FINDER. This should break you out of At Ease and leave you in the 
+Finder. Once you're in in the the Finder you've pretty much hacked the 
+protection. If you want to polish the hack (cover your tracks, find 
+passwords, etc.) here's some advanced steps you can take:
+
+  * If you know that your sysadmin keeps logs Copy the system folder to 
+    the hard drive. Rename the original system folder. Reboot without At 
+    Ease. When you are done, put the real system folder back and delete 
+    the second one.
+
+  * If you aren't concerned about logs, just move the At Ease Preferences 
+    out of the System Folder: Extensions folder and reboot. Remember to 
+    put them back when you are done. 
+
+  * Install one of the aforementioned Keystroke recorders. Wait a few days 
+    and check the logs from the recorder. You should have the 
+    administrator password!
+
+Crashing the System--Another Hack for At Ease lies in Crashing the system 
+it's running on. Just keep opening applications until all the RAM is 
+consumed. On older versions of At Ease, a dialogue box will appear that 
+asking you if you would like to quit At Ease to free up RAM. Click yes! 
+
+Null Password--Open the file System Folder:At Ease:At Ease Preferences with 
+MSWord or any ther text editor. Look for the string "MFDR\	]". Delete 
+everything between "\" and "]". Save the changes and you have a null 
+password. Now you can go to At Ease Setup and change the password to whatever 
+you want! 
+
+OEM Hack---The following directions are excerpted from the At Ease 
+Administration Manual from the Section: 'What do I do if I forget my 
+Administrator Password?'
+
+  If you forget the At Ease administrator's password, follow the 
+  directions below instead of those in the manual. If your startup disk is 
+  locked, you'll first need to run the Unlock application on the AT Ease 
+  2.0 Utilities disk to unlock the start-up disk. Consult the manual for
+  information about the Unlock application. 
+ 
+    1. Start up your computer from another startup disk.
+    2. Open the System Folder of your usual startup disk. 
+    3. Open the At Ease Items folder inside your System Folder. 
+    4. Drag the At Ease Preferences file into the trash. 
+    5. Hold down the Option key while you choose Empty Trash from the 
+       Special menu.
+    6. Restart from your usual startup disk. 
+    7. Open the At Ease Setup for Workgroups application. 
+ 
+   Note: If you are using an AppleShare server volume as the At Ease disk, 
+         your setups may not appear until you reset the At Ease disk to 
+         this server volume. 
+
+    8. Reconnect to the server volume and use the At Ease Disk command to
+       reselect the volume.
+
+   Note: Make sure you use the information on the server instead of
+         replacing it with the information on the startup disk. 
+
+    9. Add a new password and clue.
+   10. Make sure the following options set correctly: 
+
+       * Allow Remote Administration checkbox
+       * Lock Startup Volume checkbox
+
+   11. Turn At Ease back on.
+   12. Quit At Ease Setup for Workgroups."
+
+
+09. How can I use DisEase to Hack At Ease?
+
+DisEase is a fairly powerful utility for Hacking At Ease. It allows you to 
+manipulate At Ease, break out of At Ease, decode passwords, any number of 
+things that would render At Ease useless. The only problem is on most At Ease 
+protected system you are prevented from finder or floppy disk access, thereby 
+preventing you the ability to run DisEase in the first place. In these 
+situations, follow the above steps for breaking into the Finder, you can then 
+access DisEase and use it to decode the Administrator password.
+
+
+10. Where can I find DisEase?
+ 
+DisEase 1.0.......ftp://ftp.eskimo.com/u/a/adrenal/mac/DisEase.hqx
+DisEase 3.0.......http://www.tyrell.net/~ibs/Hackr/Cracking/DisEase3.0.sit.hqx
+
+Also you can contact the Author. macpants@aol.com
+
+
+11. How can I Hack FoolProof?
+
+FoolProof is Macintosh security scheme that uses driver level and Systems 
+Folder protection to prevent against bypassing. Driver Level protection is 
+protection written to the Driver Level of the Hard Disk. At this level, the 
+drive can not be mounted without envoking the protection. This condition will 
+continue to exist as long as the Driver remains intact. Here are some methods 
+of defeating it.:
+
+IMPORTANT NOTE--The FoolProof extension, among other things, intercepts the 
+Restart & Shutdown calls from the System and makes sure to disable any 
+external boot device whenever a Restart or Shutdown is called. To defeat 
+this, when you Restart YOU HAVE TO DO HARD RESTARTS (ctrl-opt-del). When you 
+do hard Restarts no calls are made to the System, and the System is restarted 
+without locking or protecting anything. So be sure to do HARD RESTARTS when 
+hacking FoolProof.
+
+Floppy Boot--As detailed in the beginning of this section, Boot from a floppy 
+with command-option-shift-delete held down. This will prevent the Protected 
+Driver from loading. Once the System is loaded you may need to use a Disk 
+mounting utility to Mount the Hard Drive. Once the drive is mounted, Move the 
+FoolProof Extensions and Prefs out of the System folder and Restart. 
+FoolProof should be disabled.
+
+exit_to_shell--Restart and hit the interrupt switch while the INITs are 
+loading and call an exit_to_shell (see MacsBug section), then Move the 
+FoolProof Extensions and Prefs out of the System folder and Restart. 
+FoolProof should be disabled.
+
+Find File Hack--If you're started up onto a FoolProof protected system, 
+you'll notice that you probably don't have access to the System Folder. If 
+you did you could drag the FoolProof Extension and Prefs out of the System 
+Folder and Restart without FoolProof protection. Well, believe it or not, the 
+Finder itself provide circumvention around this protection.
+
+  1. From the Finder, go up to Find in the Filemenu. Search for 'Finder'
+
+  2. Find is nice enough to find Finder for us in the Extension Folder, AND 
+     open the Extension Folder for our access. By NO sheer coincedence, the 
+     FoolProof extensions just happen to be in the same folder.
+
+  3. Drag the FoolProof extensions out of the System Folder and Restart. 
+     FoolProof should be disabled.
+
+Note--When you're done with all of the above methods, drag the FoolProof 
+extensions and prefs back into the System Folder and restart. Noone will ever 
+know you were there.
+
+
+12. How do I access the Chooser when it is protected on Foolproof? 
+
+First try the default password 'foolproof'. If that doesn't work, Make a copy 
+of the Chooser and use ResEdit to change the Chooser Creator type from 'dfil 
+chzr' to 'dfil keyc'. This will reset the Password to the default: 
+'foolproof'. Swap (don't delete) the original Chooser with the modified copy. 
+Now you access the Chooser with the default password. When you're done, cover 
+your tracks by putting back the Original Chooser.
+
+
+13. How can I defeat Passworded Control Panels?
+
+The single most fundamental way to defeat a passworded Control Panel is to 
+Delete it's preferences. The preferences for any particular program is in the 
+Preferences folder in the System folder. In some cases it may be somewhere 
+else or in other cases the preferences may be invisible. A good program to 
+use to look for a Preferences file (or any file for that matter) is Norton 
+Disk Editor. This program allows you to search for a file by any number of 
+criteria, including attributes (thereby allowing you to search for Invsible 
+files). Once you've found the prefs for the Control Panel you're trying to 
+defeat, delete them (the prefs.) If you can't delete them write over them 
+using a file wiper  (see Part #07, File Wipers) Restart. In most cases, 
+whatever Control Panel you were trying to get into will be void of it's 
+password protection. This methods works good for: Screen savers, Virus 
+Programs, some security programs, and Network Managers.
+
+
+14. How can I defeat the DeskTracy Control Panel (at Kinko's)?
+
+Take a floppy with a File Wiper on it (see Part #07, File Wipers) to 
+Kinko's. Open -> System Folder: Extensions: Desk Tracy Folder Drag the files 
+'DTPreferences' and 'UData' onto the file wiper. Go up to the Menubar, you 
+should see your Login name up there, drag down to 'Configuration'. Don't 
+change anything, just click the Close Box and it will ask you if you want to 
+Save. Click 'Yes' Now go up to the Apple Option Menu and Select 'About Desk 
+Tracy'. It should beep at you, and then show you the Desk Tracy 'About' 
+Window. By this process, you have just Returned Desk Tray to it's Virgin 
+Installation State. All accounting is Off, and Desk Tracy is like it was 
+when it was First installed, BEFORE it was configured
+
+
+15.  What is EtherNet or Packet Sniffing?
+
+
+Ethernet sniffing is listening (with software) to the raw ethernet
+device for packets that interest you.  When your software sees a
+packet that fits certain criteria, it logs it to a file.  The most
+common criteria for an interesting packet is one that contains words
+like "login" or "password."
+
+
+here are a couple of EtherNet sniffers: 
+
+Watch 1.7.1......http://vsl.cnet.com. Search: 'sniffer'
+EtherPeek Demo...ftp.aggroup.com/Public/demos
+
+
+16. How can I EtherNet Sniff on the Mac?
+
+(original by spooty , mods by filbert 4 the machaq faq) 
+This article will explain how to get someone's password for their unix 
+account etc., from the packets transmitted over a localtalk or ethernet 
+network. I will not bother to explain the difficulties (or impossibilities) 
+of cracking THE password file, or worse yet, shadowed passwords. If you want 
+to learn about these, go read alt.2600 and look at all the lamers asking how 
+to hack the password file in one easy step. What I will give you is the 
+simplest and most powerful way to acquire passwords. Sniffing packets may or 
+may not be punishable where you are. It may be shady behavior, or potentially 
+legitimate. Using someone else's password is obviously a no-no in the eyes of 
+admins, and the law, but then again, if you gave a shit, you wouldn't be 
+reading this. Ready? 
+
+First of all, you need a packet sniffer. Just about any sniffer will do. 
+Since this article is aimed primarily at Mac users, I will use Watch 1.7.1, 
+available at the Phruwt ftp site. This app will do nicely. Now, all you need 
+is a Mac and a network, both of which you will have to find yourself. 
+
+Any computer at a cluster at any company or university will probably be tied 
+into their network, at least for a local bridge. For older, smaller, or just 
+plain dumber networks, you will be able to access the entire LAN from any 
+computer connected to it. Otherwise you are limited to the particular zone to 
+which your computer is assigned. It shouldn't be too hard to find a good, 
+accessible zone, however. If there is a main computing center at a school, 
+for example, it will probably be both the site of accessible computers AND 
+the same zone that sysadmins use. 
+
+Alrighty. Time to get to work. Fire up your sniffer. The default settings on 
+Watch 1.7.1 are fine. Under the "Filter" menu, only "LAP ctrl capture" should 
+be checked. Click "start." Now you will see "packets" and "errors" begin to 
+add up. For the first time, let 50 or more packets pile up before you hit 
+stop. Now look at the packets. They will all have names like AFP, ATP, etc, 
+that will confuse the hell out of your newbie ass if you don't know what they 
+are. Don't worry about them. What you're looking for are the ones which are 
+labeled by either TCP or Telnet. 
+
+Anyone using Telnet to log into an account will have to enter both a userid 
+and a password. This is where your knowledge of terminals comes in. When 
+you're telnetting, or using any terminal-based software, every keystroke you 
+hit is sent to the server, and then the server responds somehow to your 
+screen in the terminal. For example, say you are typing a letter to someone 
+using pine or some other unix mailer. If you type "k", a "k" will be sent to 
+the server, and then a "k" will be sent back to appear on your screen. On the 
+other hand, if you're hitting space bar to advance a page or something, a 
+space will be sent, but the server will not return a space, but rather the 
+next page of text. Got it? 
+
+So what you're looking for is the userid/password interaction between the 
+client and server. By watching the packets (and you'll see this quickly), 
+you'll soon find some sucker firing up his account. The first sign will be 
+the server's prompt for the userid, which should be as plain as day. Then the 
+unwitting fool will start typing in his userid, and the server will be 
+displaying it on his screen like this (these are only the last few columns 
+you will see in Watch. For more detail, you can double click on any of the 
+packets):
+
+(In this example, 25 is the server and 69 is the user's computer) 
+
+lap dst 69 lap src 25 Telnet: 'login:'
+lap dst 25 lap src 69 Telnet: 'l'
+lap dst 69 lap src 25 Telnet: 'l'
+lap dst 25 lap src 69 Telnet: 'o'
+lap dst 69 lap src 25 Telnet: 'o'
+lap dst 25 lap src 69 Telnet: 's'
+lap dst 69 lap src 25 Telnet: 's'
+lap dst 25 lap src 69 Telnet: 'e'
+lap dst 69 lap src 25 Telnet: 'e'
+lap dst 25 lap src 69 Telnet: 'r'
+lap dst 69 lap src 25 Telnet: 'r'
+
+Of course anyone typing any words will look like this, so you have to be sure 
+this punk is logging in and not just blabbing about himself to his fat 
+girlfriend back home. So make sure he has received the login prompt before 
+this, by paying attention to the source and destinations of each packet (dst 
+and src). Also, all the packets may not be together like this. A lot of other 
+shit might be mixed in, so once again, lay off the crack and make sure the 
+packets you're looking at are all going to and from the same places (note: 
+the number for the server will just about always be the same and the varying 
+clients' addresses will differ). 
+
+Now when it's time for the password:
+
+lap dst 25 lap src 69 Telnet: 's'
+lap dst 69 lap src 25 Telnet: ' '
+lap dst 25 lap src 69 Telnet: 'm'
+lap dst 69 lap src 25 Telnet: ' '
+lap dst 25 lap src 69 Telnet: 'e'
+lap dst 69 lap src 25 Telnet: ' '
+lap dst 25 lap src 69 Telnet: 'g'
+lap dst 69 lap src 25 Telnet: ' '
+lap dst 25 lap src 69 Telnet: 'm'
+lap dst 69 lap src 25 Telnet: ' '
+lap dst 25 lap src 69 Telnet: 'a'
+lap dst 69 lap src 25 Telnet: ' '
+
+Where, you ask, are the missing letters? They don't show up, because the 
+server doesn't reveal them on the user's screen, so the ol' peeking over the 
+shoulder technique won't work, unless you can follow someone's typing 
+fingers, which is hella difficult.
+
+Okey dokey. You've got your userid and password. Go have fun now. 
+
+Unless, of course you want to hear about the other fun you can have with a 
+sniffer. Say for example, you're trolling around and see someone is reading 
+PORNO stories on usenet. One time I found this kid reading stories about some 
+little boy getting off by being spanked by his mom. What a fucking weirdo! 
+Anyway, you can pinpoint who is doing what pretty easily. Use another 
+program, like Trawl or Interpoll, and you'll be able to see what every 
+locally networked computers' addresses are. Usually you can get the owner 
+name too. Also, you can set Watch to filter out everything except the traffic 
+between two addresses. This is particularly useful, because most of the time 
+there will be so much fucking trash flying back and forth, that it will be 
+difficult to wade through it all. 
+
+This method is sort of a bitch to use, because you may have to just wait and 
+be lucky to get the password. You can be sneaky though like this: 
+
+Call some bastard up whose password you want. Be at a computer, if necessary 
+in his/her zone.
+
+You: "Hey Jerky, didja get that kewl mail I sentya? Them: "Uh, let me 
+check..."
+(Fire up your sniffer and do it quick!)
+Them: "Hold on..."
+(click, click, click, as they type away) Them: "All it says is 'hi.'"
+You: "Oh whoops, I'll have to send it again. Bye." 
+
+Hang up, stop the packet collection and you've got paydirt. 
+
+If someone uses a desktop based mailing program, like Eudora, the collecting 
+account passwords is even easier. The packets will be marked "TCP" instead of 
+"Telnet" and in the text of the packet (you'll have to check the full details 
+of the packet for this) you'll find the whole text of the userid's and 
+passwords inside.
+
+Sniffers are good for a lot of other shit too, so play around with them and 
+see what you get. Unfortunately, Apple Fileserver (AFS) passwords are a bear 
+to get, since they are usually two-way scrambled (sys 7.1 and higher, I 
+believe). I'm trying to figure out the encryption, but it's not really my 
+department. In any event, someone's account password will very often be their 
+server password too.
+
+Although some systems are switching over to Kerberos protected transmission 
+of all packets across their LANs, most are still wide open. Doing something 
+butt-stupid, like changing someone's password on them, will only result in 
+them getting back into their account in a matter of hours, so be creative. 
+It's pretty fun just to watch (hence the name) the dark sides of all the 
+people you know. Then go up to them and say shit like, "Spank much lately?" 
+Have fun with this, and don't get caught. 
+
+
+17. How can I defeat a FileGuard protected system?
+
+FileGuard is a powerful and versatile security system for the Mac that uses 
+Driver Level protection, Encryption and Owned Finder Resources to provide 
+controlled access to Protected system. In defeating FileGuard completely 
+you'll need to be able to eliminate the protection, and decrypt protected 
+filed.
+
+Basic FileGuard Hack--FileGuard protection can be somewhat confusing. The 
+install process requires installing FileGuard onto a HardDisk, and then 
+installing the Driver Level protection of FileGuard after the initial install 
+has been performed. Because of this, and because of the way FileGuard acts 
+after the initial install, someone unfamiliar with FileGuard can easily be 
+left with the impression that his or her system is protected, when in fact 
+the Driver Level of FileGuard's protection has not beeen installed. Without 
+the Driver Level protection the FileGuard can be defeated by disabling 
+extensions. So to start, ry Restarting with the Shift-Key held down. If the 
+Driver Level protection of the system has not been installed, then you will 
+have unprotected access to the system.
+
+FileGuard 2.7.x Hack--If the Driver Level of FileGuards protection has been 
+installed on the system, the only way to defeat the protection is to Hack the 
+password or to remove the Driver altogether. Password hacking is discussed in 
+more depth in the section on FileGuard 2.9.x. It is discussed their ecause it 
+is much more viable for that version of FileGuard. For this version (2.7.x), 
+the most viable way to defeat the security is to remove the Driver 
+altogether.
+
+To remove the Driver you'll need to make an HD floppy Start up disk that has 
+a SCSI Driver utility on it. This is easy task given the amount of 
+information you need to cram on to a single 1.44mb Floppy. To aid you in 
+making this special floppy, I suggest you go by LaCie's home page and check 
+out how they suggest you do it. 
+
+LaCie.......http://www.teleport.com/~lacie/makestarter.html. 
+
+This page can provide you insight on how to make a SCSI Driver Install disk 
+for use in FileGuard and other driver level protection hacking.
+
+Try the following as a LAST RESORT:
+
+  1. Get a high density disk. Install some startup software for the machine 
+     in question. Install some disk formatting software that ets you install 
+     new drivers (like Gold Triangle, Apple HD SC Setup, or Silver Lining).
+
+  2. Restart, holding down command-option-shift-delete. This prevents the
+     SCSI Bus from trying to mount the internal hard disk.
+
+  3. Run disk formatting software and install a new driver over the old 
+     driver.
+
+  4. Restart. No password should be prompted for.
+
+  NOTE--This process will probably cause the hard disk to crash severely
+  in the future!!! Only do this if there is something you really need on the 
+  disk. After you copy the needed files to a different place, you should 
+  REFORMAT THE HARD DISK.
+
+
+FileGuard 2.9.x Hack--In the 'FileGuard 2.9 addendum' which highlights 
+changes in the latest release of FileGuard, it states:
+
+  'FileGuard now allows you to customize the message that appears whenever 
+   the volume password is requested.'
+                   . . . . . . . . . . . . .  . . . . . 
+  'Unless you checked the option 'Ask volume password at startup' (see 
+  below), the volume password is only requested when the FileGuard extension 
+  is not active (for example, if someone tries to boot with extensions off to 
+  bypass FileGuard). Since the volume's password is not regularly requested, 
+  you may also wish to customize this message to include some kind of reference 
+  which will trigger your memory in case you forget the volume password. Be 
+  sure not to type in an obvious reference that could let others easily guess 
+  the  password.'
+
+What a give away. Heres how this hack would (potentially) work: 
+
+Normally, if a system is FULLY protected by FileGuard, when you Start up a 
+dialog will appear requesting a NAME and an ACCESS KEY. You're given three 
+opportunities to get it right or the System Restarts and you go through the 
+same thing again. 
+
+Now, if you try and Restart with the Shift-Key held down, the system will 
+load WITHOUT Extensions and without the FileGuard Control Panel. But even 
+without the Control panel, the System is still protected by the Driver Level 
+portion of FileGuard's Protection (provided Volume Protection has been 
+installed). But the Driver Level portion of Fileguard's protection is less 
+secure and for two reasons:
+
+  1. The Driver Level protection puts up a message (as stated in the above 
+     mentioned 'addendum') which may, in and of itself, contain the password. 
+
+
+  2. The Driver Level protection doesn't ask for a NAME, only a VOLUME 
+     PASSWORD, thereby eliminating part of the guess work.
+
+So, boot up a FileGuard system with the Shift-Key held down, read what the 
+FileGuard says, and start using the words within the dialog as potential 
+Passwords to the Volume. If that doesn't work, try possible single word 
+passwords (remember, you only have to enter one word). With a little effort 
+you might just exploit a vulnerability.
+
+FileGuard Encrypted Files--Use FileGuard to encrypt a file with the password 
+'test', for example. Use ResEdit to copy the resource 'high' from that file. 
+Paste it into the file that contains the unknown password. Save changes and 
+quit. Decrypt the modified file with FileGuard using the password 'test'.
+
+
+SECTION III: SYSTEMS HACKING
+----------------------------
+
+18. How Can I hack FirstClass?
+
+FirstClass Defaults--Theirs only one FirstClass default I know of and it's a 
+doosie. Every FirstClass system comes with the Administrators account:
+
+USER: admin
+PASS: admin
+
+The FirstClass Administration Manual very clearly states that the first thing 
+you are REQUIRED to do after Installing your FirstClass server is CHANGE this 
+password. But because of the way FirstClass is designed, it is often 
+overlooked. When you've installed your Server and loaded up the FC Client 
+Admin settings that come with the server, you never have to enter a password. 
+Its already saved into the Settings. So all you do is click Login and you're 
+in. And when first configuring a FirstClass system there are ALOT of things 
+to address and an inexpereinced Admin (as most Admins setting up an FC system 
+are) will often overlook changing this default account.
+
+Password Dig--Theres a utility called FirstClass Digger 1.x which will dig 
+passwords out of the FirstClass server. This utility is available at via 
+SoftArc Online. For more info on SAOL goto the SoftArc home page: 
+http://www.softarc.com
+
+Admin Password Dig--There is one way to hack FirstClass if you have physical 
+access to the server. To do this, you first open the root level of the hard 
+drive and then open the folder named "FirstClass Post Office". The locate the 
+foldernamed "UserDir" and open that. From there, open the folder named 
+"admin.". Then copy the file named .ENProf onto a disk. When you have the 
+time, open it up with Microsoft Word. To do this, you must change the "Show" 
+pull-down menu from "Readable Files" to "All Files" and THEN locate the 
+.ENProf. You will see the admin's password around the fourth or fifth line. 
+If the admin. is using a shorter password than he used to, then you will see 
+his password, followed by the correspoding characters of his old password. 
+I.E., if someone changed their password from "systemadmin" to "admin." it 
+would look like "adminmadmin". If you do not get on with the whole string 
+listed, try passwords by taking the last letter away until you get it. You 
+can now give yourself Administrator privs. From there, you can do everything 
+the real admin. can do, EXCEPT open the Admins desktop, and grant other users 
+admin. privs.
+
+Admin Accounted Settings--Another one I've seen, is when a FirstClass Admin 
+is setting up a new Server, one of the things they can do to add to the look 
+of their System is make custom Settings file. Well this Custom setting file 
+is usually just the Admin settings file modified. They modify it a ittle bit 
+at a time, and then to check to see how it looks they'll login to their 
+system. For the sake of ease they'll go ahead and have the Username and 
+Password saved so all they have to do to test the setings after a 
+modification is click Login (cuts down on the time required to enter the name 
+and password). Well after a few hours or days of making the perfect settings 
+file, they're tired, and happy and releived and whole bunch of other things 
+that lead to distractions. They think they're done, and they Stuff their 
+settings file and distribute it on BBSs or the Internet so people can use the 
+settings to access their FC system. What did they forget to do? They forgot 
+to delete the Admin username and password from the settings file. By the time 
+they've found out, someone has already logged in with the uAdmin account (all 
+they had to do was click Login), accessed the Hard drive, found their way to 
+the DTP or Acconting folder, and stolen confidential or personal files.
+
+FC Time Limit Hack--Next time you're logged into a FirstClass system be sure 
+to go upto view and select Session Status. Keep track of your time. When 
+you're time is almost up, go up to the menu bar and hold a menu open. The 
+System won't log you off under these this ondition. Wait for about 30 seconds 
+past the time you're supposed to be logged off. Let go of the menu and you'll 
+still be logged on and can stay logged on indefinitley.
+
+
+19. What is UNIX Password Hacking?
+
+Traditionally stated, the purpose of hacking a UNIX is: to "get to ROOT." 
+This refers to the ROOT account that every UNIX system has as part of it's 
+Operating system. The ROOT is a 'Trusted User' account, THE most powerful 
+account on a UNIX. If you can hack a ROOT you can utilize or exploit every 
+function a UNIX is capable of. But to get to "ROOT" you have to have 
+somewhere to start. one of the most common places to start is with the 
+'passwd' file.
+
+'passwd' is the common name of the file in which user account information is 
+stored on a UNIX system. You might consider it a comprehensive users list. 
+The file contains the information for an accounts USERNAME, PASSWORD, USER 
+NUMBER, GROUP, GECOS, HOME DIRECTORY, and SHELL. A single entry of a passwd 
+file entry might look like this:
+
+
+                 PASSWORD        GROUP NUMBER    HOME DIRECTORY
+                /               /               /
+               /               /               /
+  kbahadur:8d34jSjs73hsb:2162:15:Ken Bahadur:/usr/users/kbahadur:/usr/bin/ksh
+   \                      \             \                          \
+    \                      \             \                          \
+     USERNAME               USER NUMBER   GECOS INFORMATION          SHELL
+
+
+Now then, if you can see this:
+
+           encrypted equivalent of pasword
+             /
+kbahadur:8d34jSjs73hsb:2162:15:Ken Bahadur:/usr/users/kbahadur:/usr/bin/ksh
+
+...you can use a passwd' file crackers to "guess" the password to this 
+account entry. Once you've guessed an accounts password you can use that 
+account to try and hack root. Try theses common commands on a UNIX to attempt 
+to steal the 'passwd' file.
+
+UNIX 4.x.................cat /etc/passwd
+AiX......................cat /etc/security/passwd
+yp/NIS (yellow pages)....ypcat passwd
+
+
+20. How Can I do it on the Mac?
+
+'passwd' File Crackers--Hacking UNIX can be done on any machine, the only 
+place where it can become localized (like on your Mac) is in the process of 
+hacking 'passwd' files. To hack a 'passwd' file on a Mac, you need a password 
+file cracker FOR the Mac. A few such programs are:
+
+MacKrak 2.0b1.........ftp://ftp.armory.com/pub/user/swallow/
+MacCrac v.01a.........http://iti2.net/k0p/mac_u-g/MacCrac%20FAT%200.1A.sit.bin
+Killer Cracker 8.0....http://www.tyrell.net/~ibs/Hackr/Hacking
+
+Word Lists--To use the above listed 'passwd' file crackers you need 
+Dictionary or Word List files. MacCrac comes with a fairly large Dictionary 
+(2meg), but for the other programs you need to find your own. Paul Leyland 
+runs Word List f*ckin' central. Hes got hundreds of Word Lists for dozens of 
+nationalities and criteria, for example: Star Trek, Swahili, American, 
+French, Names, Dog Names, just a shit load. check him out:
+
+Word Lists............ftp://ftp.ox.ac.uk/pub/wordlists/
+
+Word List utilities--You can combine several different word lists to make 
+custom Dictionaries for special (hacking) occassions. A utility that can 
+bring considerable ease ease to this task is Word List Maker. Word List Maker 
+is a 'drag&drop' utility to create sorted lists of words from arbitrary text 
+files. You can drop several text files and/or custom MS-Word dictionaries on 
+to the WordListMaker icon to create a single word-list. You can also exclude 
+arbitrary words from the output file. It will combine 2 or more Word Lists, 
+alphabetize them and delete the duplicates.
+
+WordListMaker v1.6....ftp://mirror.apple.com/mirrors/Info-Mac.Archive/text
+
+
+SECTION IV: PHREAKING
+---------------------
+
+21. What is phreaking?
+
+Phreaking is the exploration, use, abuse, and/or defraudment of the telephone 
+system via the manipulation of telephone system circuits, switches or 
+services. Phreaking is commonly performed by generating tones which allow you 
+to utilize various functions of the phone system usually reserved for 
+internal use. The afforementioned tones can be generated by software programs 
+designed to perform this purpose. These warez are commonly referred to as 
+'phreaking warez'
+
+
+22. What are some phreaking warez for Macs?
+
+FoneTone Pro v1.0--FoneTone Pro v1.0 is a United Kingdom Blue Boxing program. 
+Blue boxes use a 2600hz tone to size control of telephone switches 
+that use in-band signalling. The caller may then access special switch 
+functions, with the usual purpose of making free long distance phone calls, 
+using the tones provided by the Blue Box. Depending on who you ask, most 
+people will tell you Blue Boxing is no longer possible in the United States. 
+It is, however, still widely performed in Europe.
+
+FoneTone Pro v1.0 
+http://www.tyrell.net/~ibs/Hackr/Phreaking/FoneToneProv1.0.sit.hqx
+
+MacPhoney--MacPhoney is a RainBow box emulator. That is, it's a box that 
+performs a number of different boxing tones. These tones include Green 
+Box--pay phone tones, Red Box--pay phone toll tones, White Box--AutoVon 
+tones, and TouchTones--standard dialing tones.
+
+MacPhoney                   
+http://www.tyrell.net/~ibs/Hackr/Phreaking/Phoney4Mac.sit.hqx
+
+
+23. How can I use these programs?
+
+Mac Phreaking programs work by producing tones which when played through 
+phone lines will have the potential of exploiting functions of the phone 
+system. The generated tones are produced through the Mac speaker. For the 
+tones to be effectivley played through the phone line, it is best to have the 
+phone line connected to the Audio Out jack of your Mac or Newton. The best 
+illustration of how this is done comes from Mr. Upsetter in a Submission made 
+to and published in Phrack 38.
+
+ AUDIO LINKS
+ ~~~~~~~~~~~
+By Mr. Upsetter
+
+It all started with my Macintosh...
+
+Some time ago I had this crazy idea of connecting the output from the
+audio jack of my Macintosh to the phone line.  Since the Macintosh has
+built in sound generation hardware, I could synthesize any number of
+useful sounds and play them over the phone.  For instance, with a sound
+editing program like SoundEdit, it is easy to synthesize call progress
+tones, DTMF and MF tones, red box, green box, and other signalling tones. 
+So I set out to do exactly this. I created a set of synthesized
+sounds as sound resources using SoundEdit.  Then I wrote a HyperCard stack
+for the purpose of playing these sounds.  Now all I needed was a circuit
+to match the audio signal from the headphone jack of my Mac to the phone
+line.
+
+
+ How The Circuit Works
+ ~~~~~~~~~~~~~~~~~~~~~
+I designed a simple passive circuit that does the job quite well.  Here is 
+the
+schematic diagram.
+
+            +------+                       T1      +------+
+      o-----|  R1  |-----o------o--------(| |)-----|  C1  |-----o-----o
+            +------+    +|     -|        (| |)     +------+     |
+                       +---+  +---+      (| |)                +---+
+    to Mac             | D |  | D |   8  (| |) 500            |VR |   to
+   headphone           | 1 |  | 2 |  ohm (| |) ohm            | 1 |  phone
+     jack              +---+  +---+      (| |)                +---+  line
+                        -|     +|        (| |)                  |
+      o------------------o------o--------(| |)------------------o-----o
+
+C1-.22 uF, 200V
+D1,D2- 1N4148 switching diode
+R1-620 ohm, 1/4W
+T1- 8 ohm to 500 ohm audio transformer, Mouser part 42TL001
+VR1-300V MOV, Mouser part 570-V300LA4
+
+VR1 is a 300V surge protector to guard against transient high voltages.
+Capacitor C1 couples the phone line to transformer T1, blocking the phone
+line's DC voltage but allowing the AC audio signal to pass.  The transformer
+matches the impedance of the phone line to the impedance of the headphone 
+jack.
+
+Diodes D1 and D2 provide clipping for additional ringing voltage protection
+(note their polarity markings in the schematic).  They will clip any signal
+above 7 volts.  Resistor R1 drops the volume of the audio signal from the Mac
+to a reasonable level.  The end result is a circuit that isolates the Mac 
+from dangerous phone line voltages and provides a good quality audio link to 
+the phone line.
+
+
+ Building and Using the Circut
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This simple circuit is easy to build (if you're handy with electronics).  I
+personally prefer to solder the circuit together.  A length of shielded audio
+cable with a 1/8 inch mono plug on one end should be connected to the audio 
+input end of the circuit.  A standard RJ11 phone jack should be connected to
+the phone line end of the circuit.   Although this circuit will protect 
+against dangerous phone line voltages, it is best to disconnect it when not 
+in use. You just don't want to risk anything bad happening to your brand new 
+Quadra 900, right?
+
+Once you have an audio link between your Mac and the phone line, the
+applications are limitless. Use HyperCard's built-in DTMF dialing to dial for
+you, or build a memory dialer stack. Talk to people with Macintalk.  Play 
+your favorite Ren and Stimpy sounds for your friends.  Play a ringback tone 
+to "transfer" people to an "extension".  Build and use a set of synthesized 
+MF tones.  Try to trick COCOT's with synthesized busy and reorder signals.
+
+
+ But Wait, There Is More...
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+So you say you don't own a Macintosh?  That is ok, because the circuit can be
+used with other devices besides your Mac. You can use it with the 8 ohm
+headphone output from tape recorders, radios, scanners, etc.  You could also
+probably use it with any other computer as long as you had the proper audio 
+D/A hardware and software to create sounds.
+
+All parts are available from Mouser Electronics.  Call 800-346-6873 for a 
+free catalog.
+
+
+SECTION V: MAC UNDERGROUND RESOURCES
+------------------------------------
+
+24. What are some Sites of interest to Mac Hackers?
+
+This list contains every URL already listed in this FAQ, including the ones 
+not yet mentioned.
+
+AdrenaL's Home Page
+http://mail.eskimo.com/~adrenal/
+   
+AdrenaL's h/p Mac FTP Site
+ftp://ftp.eskimo.com/u/a/adrenal/mac/
+
+AG Group
+ftp://ftp.aggroup.com/
+
+Brunning Mac pranks 
+http://www.skidmore.edu/~brunning/machacks.html
+
+Bubba's Mac stuff
+http://www.io.org/~bubba/hackz.html
+
+Bungalow Bill's page
+http://www.tiac.net/users/julianne/
+
+Cool MacsBug Tricks (HTML version)
+http://www.biddeford.com/~benyc/Macsbug.html
+
+Funky Brewster's site                    
+ftp://ftp.primenet.com/users/m/mattb1
+
+GodBoy (Whacked Mac Mirror, sorta.) 
+http://www.tyrell.net/~ibs/Hackr/hack.html
+
+Grady's Mac page 
+http://pulsar.cs.wku.edu/~russellg/mac/software/software.html
+
+Havock Alley
+http://web.aimnet.com/~woodland/home.html
+
+How to Make a SilverLining Start up Disk
+http://www.teleport.com/~lacie/makestarter.html. 
+
+Knight Hawk's                  
+ftp://ftp.winternet.com/users/nitehwk/hack/mac/
+ 
+Mac Hack Info
+http://www.liberty.com/home/cyberpunk/hakkks.html
+
+The Macintosh internet
+http://www.macfaq.com/
+
+Mac PGPfone Home Page
+http://web.mit.edu/network/pgpfone/
+
+Making a Silverlining Startup Disk
+http://www.teleport.com/~lacie/makestarter.html
+
+Observer's Little Nook
+http://www.users.interport.net/~david/stuff.html
+
+oleBuzzard's kn0wledge phreak                             
+http://iti2.net/k0p/
+ 
+The Reaper's Image II/Wundernet
+http://www.wundernet.com/
+
+Rock Quarry 
+http://pulsar.cs.wku.edu/~russellg/mac/software/the_rock_quarry.html
+
+Sean's Hack Shack
+http://wheel.dcn.davis.ca.us/~sean/hack/hack.html
+
+The Seeker's Home Page
+http://www.grfn.org/~seeker/
+
+SoftArc Home Page
+http://www.softarc.com
+
+Sun Horizon: Cornea
+http://www.winternet.com/~achilles/
+
+Tips and Tricks for Macsbug Page
+http://www.scruznet.com/~crawford/Computers/macsbug.html
+
+The Whacked Mac Archives
+ftp://whacked.l0pht.com/
+ 
+Word Lists
+ftp://ftp.ox.ac.uk/pub/wordlists/
+   
+
+25. What are some Warez of Interest to Mac Hackers?
+
+This list contains every URL listed in this FAQ
+
+Burn 2.2
+http://vsl.cnet.com. Search: 'Burn'
+
+Break Before
+http://vsl.cnet.com. Search: 'macsbug'
+
+DisEase 1.0
+tp://ftp.eskimo.com/u/a/adrenal/mac/DisEase.hqx
+
+DisEase 3.0
+http://www.tyrell.net/~ibs/Hackr/Cracking/DisEase3.0.sit.hqx
+
+DBugr 1.2.1
+http://vsl.cnet.com. Search: 'macsbug'
+
+Debugger F-Key
+http://vsl.cnet.com. Search: 'macsbug'
+
+EtherPeek Demo
+tp.aggroup.com/Public/demos
+
+Flame File v1.5.8
+http://vsl.cnet.com. Search: 'flamefile'
+
+FontTonePro
+http://www.tyrell.net/~ibs/Hackr/Phreaking/FoneToneProv1.0.sit.hqx
+
+Invisible Oasis
+http://wheel.dcn.davis.ca.us/~sean/hack/hack.html
+
+Killer Cracker 8.0
+http://www.tyrell.net/~ibs/Hackr/Hacking
+
+MacsBug
+http://www.support.apple.com/pub/Apple%20SW%20Updates/US/Macintosh/Utilities
+
+MacCrac v.01a
+http://iti2.net/k0p/mac_u-g/MacCrac%20FAT%200.1A.sit.bin
+
+MacKrak 2.0b1
+ftp://ftp.armory.com/pub/user/swallow/
+
+MacLife Insurance
+http://vsl.cnet.com. Search: 'maclifeinsurance'
+
+Obliterate v1.1
+http://vsl.cnet.com. Search: 'Obliterate'
+
+Phoney4Mac
+http://www.tyrell.net/~ibs/Hackr/Phreaking/Phoney4Mac.sit.hqx
+
+SuperSave 1.x
+http://vsl.cnet.com. Search: 'super save'
+
+The Eraser 2.0.0
+ftp://ftp.euro.net/Mac/info-mac/disk/eraser-20.hqx
+
+Watch 1.7.1
+http://vsl.cnet.com. Search: 'sniffer'
+
+WordListMaker v1.6
+ftp://mirror.apple.com/mirrors/Info-Mac.Archive/text
+
+
+SECTION VI: MAC HACK TIDBITS
+----------------------------
+
+26. How do I copy a read-only file?
+
+Many utilities allow you to copy read-only files, including StuffIt, 
+CompactPro, etc.
+
+
+27. Where can i get the latest version of macpgp and the source code? 
+
+Telnet to net-dist.mit.edu and login as 'getpgp'. You will have to answer 
+four short questions to get the name of the file it is in(the name changes 
+every half hour). Then FTP there and go to the specified directory. The 
+current version is MACPGP2.6.2. You should also get the README files as the 
+interface barely follows the Macintosh Interface Guidelines. 
+
+
+28. How can I convert a Read Only text file?
+
+Read/Write Convertors v1.0--I run a BBS with about 5500 files online. I'd say 
+on average I put up about 15-20 new files a day. This equates to ALOT of File 
+Descriptions. To cut down on the work of Writing File Decriptions, I like to 
+just grab first or second sentence in the READ ME file in an Arhive which 
+usually explains what the program is and/or does. Nothing bugs me more than 
+when the Author converts the READ ME to one of those damn READ ONLYs which 
+not only prevent you from odifying the file but also prevent you from 
+selecting and copying text within the file. No copying and no electing means 
+no snagging that oh so valuable first sentance that cuts down on File 
+Descripting. Fortunatley my woes have been mended. Micheal Terry of Oakfield, 
+New York put together a couple of Drag&Drop apps which will convert a file 
+from one of thos Annoying READ ONLYS, or, if you wish to annoy me, TO on of 
+thos Annoying Read Onlys. They work great and he only wants a buck a piece 
+for them. http://vsl.cnet.com. Search: 'convertor'
+
+
+29. How can I Disable Extension Disabling on my Mac?
+
+Probably the oldest, easiest, and single most commonly used hack on any 
+system, is holding down the Shift-Key to disable Extensions. By doing this 
+ALOT of Security or Access related programs can be by-passed. If you don't 
+want your System to be vulnerable to this Shift-Key Extension disabling heres 
+what you can do: Use ResEdit or some other Resource editor and open your 
+System File. Delete the 'dbex' resource. Tadow! You've just disabled 
+Extension Disabling. By the way, the 'dbex' extension is used for no other 
+purpose (that I know of) so no harm will come to your system. This little 
+hack is courtesy of Scott Kevill <skevill@tartarus.uwa.edu.au>, and Aussie 
+commonly found on alt.hackintosh.
+
+
+30. Is there a way to disable the Power-down Button
+
+Does that "feature" of being able to shut down your Mac by pressing the power 
+button annoy you too? I never understood why it was important to have a 
+keyboard shortcut for a function that I might use at most once a day. And now 
+the System 7.5 update brings this wonderful behaviour to all Macs! But here's 
+how you can turn it off:
+
+  1. Open a copy of the "System 7.5 Update" file with ResEdit. 
+  2. Look for the "gpch" resource with ID 16. At offset D22 hex, you will see 
+
+     the words BF8C 4267; change these to 0002 600A. 
+  3. Save your changes and exchange the original System 7.5 Update in your 
+     System Folder with the patched one.
+  4. Restart. Press the power key. Enjoy the fact that nothing happens.
+
+As usual with this sort of patch, keep a Disk Tools disk handy to boot from, 
+in case you stuff something up.
+
+
+31. Is there a way to turn off zoomrects in System 7?
+
+The first thing you need to do is open up the finder with RedEdit. Then you
+open the code resource, then look for Code ID 4, (this does need to be 
+decompressed). Then Select Find offset and look for the code 0078, this 
+should take you to this line:
+
+48E7 1F38 594F 2FOF
+
+Then select 4 bytes (48E7 1F38), Replace them with these codes: 
+
+6000 00E6
+
+Save the copy of Finder and quit ResEdit, then Make the copy of the Finder
+(the real thing) Put the old one in a safe place incase it screwed up. Now
+just reboot the machine, and open up a Window.
+
+
+32. Outro
+
+Well thats as good as it gets for this one. I hope you found it informative. 
+I'd like to give a shout out to AX1P for conceiveiving the FAQ, and to 
+Observer, Filbert, and everyone else for their NO Bullshit information. 
+
+For the next issue I'm expecting some further incites on FirstClass and an 
+extensive tutorial on EvE protection, so look out for the next release. See 
+ya online.
+
+Next Release Version: MacHackFAQ v2.1
+Next Release Date: ?
+
+-oleBuzzard
+
+=============================================================================
+  oleBuzzard's                  7  Macintosh/PC Underground
+            /<n0wledge phreak   1  PowerPC 9500-604
+###       #########             9  5000+ Philez/1.2 Gigz
+### ### ##  ###_{_}##  ######   5  Hack/Phreak/Phraud/Anarchy
+###### ##  / ###\_/ ## ### ###  7  UnionNET/IIRG-Net
+#####  ##,(___###   ## ### ###  8  Home of the UNDERGROUNDMAC
+######  ## o \ \## ##  ### ###  8  SCAM! Magazine Distro Site
+### ###   #########    ######   2  2400-28.800 kbaud
+           /           ###      8  Only like US$8.66/month  
+  'No Bullshit!'                8  More Info? http://iti2.net/k0p
+

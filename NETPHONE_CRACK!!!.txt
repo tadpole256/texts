@@ -1,0 +1,107 @@
+ =============================
+ NetPhone v1.2.3 Phree!
+ Quick & Dirty by oleBuzzard
+ Written Today / 21-SEP-95
+ (c) 1995 <k0p> Communications
+ =============================
+
+ INTRO
+
+  Alright this is another in my Quick & Dirty series, this one details
+  how  to get the AWSOME Internet communications package, NetPhone, 
+  absolutley phree! This is also an addendum for those of you who may have
+  tried the Shark and SN Generator NetPhone kracks only to get a message 
+  that 'This serial number is already in use.'
+
+ NETPHONE 1.2.x
+
+  For those of you who don't know, NetPhone is a Software  package from
+  Electric Image which allows you to make VOICE phone calls to other 
+  NetPhone users, over the Internet. All that's required is a MAC, a MODEM,
+  and a MICROPHONE...and of course all parties must be using the NetPhone 
+  software package.
+
+  Now the NetPhone Software Package, currently at release v1.2.3, is 
+  available in it's DEMO form from the Electric Magic Home Page. 
+  But since we all know DEMOs suck we're going to explore how we can
+  get the Full Package absolutley....
+
+ PHREE!
+
+  1. Use NetScape or other graphical Web Browser and goto:
+
+             http://netpub.emagic.com/
+
+     Download the NetPhone Demo. Once you've decompressed it, it's ready 
+     for use. The only problem is the DEMO only allows 90 second long  
+     conversations, and only for a limited number of times. To get longer 
+     conversations you need to purchase a Registration Number.....unless, 
+     of course you know how to circumvent such incoveniences. To do this
+     we need to modify NetPhone to allow us to enter ANY registration code 
+     (i.e. 0u812). Here's the patch:
+ 
+             ====================================================
+     *NOTE*: If you have either the NetPhone Serial# Generator
+             or Shark's NetPhone [K]rackyou DO NOT have to make
+             the following Hard Krack. YOU DO however have to go 
+             to Step 3. Otherwise the Shark or SN Gen Kracks will 
+             only work for a day or so if that.
+             ====================================================
+
+     a. Load ResEdit 2.x. Open NetPhone and then double-click on the CODE 
+        resource. With in the CODE open 'MAIN'.  Make the following 
+        modifications:
+
+                       OFFSET = $025A86  from: 66 42
+                                           to: 60 42
+
+                       OFFSET = $0288F2  from: 67 04
+                                           to: 60 04
+ 
+                       OFFSET = $0288FE  from: 66 08
+                                           to: 4E 71
+
+                       OFFSET = $028906  from: 67 04
+                                           to: 60 04
+
+                       OFFSET = $028964  from: 66 06
+                                           to: 4E 71
+
+                       OFFSET = $02896A  from: 67 04
+                                           to: 60 04
+           
+
+  2. Now, with the above modification we can enter ANYTHING as the 
+     registration code. But now the only problem is that NetPhone, when 
+     connected to a network, makes an initial check with the Electric Image 
+     company server (at log.tpc.emagic.com) to make sure that the code that
+     is entered is registered with Electric Magic (since they are the only 
+     ones who are supposed to issue codes), and also to make sure no 
+     DUPLICATE codes are in use at the same time. Since E-Magic did not 
+     issue our code (and it's therefore not registered), we need to defeat 
+     the registration check NetPhone makes with the company server.
+
+     a. Load Norton Disk Editor. Open NetPhone 1.2.3Ý.
+
+     b. Goto the DATA FORK. Make the following FIND and REPLACE:
+
+              FIND: 6C 6F 67 2E 74 70 63 2E 65 6D 61 67 69 63 2E 63 6F 6D
+        REPLACE w/: 6F 6C 65 42 75 7A 7A 61 72 64 27 73 20 3C 6B 30 70 3E
+
+     b. Goto the RESOURCE FORK, and make the following FIND and REPLACE:
+
+              FIND: 6C 6F 67 2E 74 70 63 2E 65 6D 61 67 69 63 2E 63 6F 6D
+        REPLACE w/: 6F 6C 65 42 75 7A 7A 61 72 64 27 73 20 3C 6B 30 70 3E
+
+     d. You're done.
+
+ OUTRO
+
+  That's it! Now go make Free Long Distance phone calls, with your free
+  NetPhone Software Package (a US$59.95+tax value). Look for other fine
+  philes from oleBuzzard at.....
+
+ ****************************************************************************
+ *** oleBuzzard's kn0wledge phreak ** kn0wledge phreak World Wide Web Site **
+ ** AC 719.578.8288 / 28.8oo-24oo ** http://www.uccs.edu/~abusby/k0p.html ***
+ ********************************************************************

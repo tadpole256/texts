@@ -1,0 +1,307 @@
+This document contains notes on the Macintosh serial port and its use, with
+concentration on hardware interface issues. Last updated 12/7/94
+
+Macintosh Serial Port Hardware
+
+DANGER WARNING WILL ROBINSON!!!
+
+The DB-25 on the back of a Macintosh is NOT a serial port, it is a SCSI
+parallel port. Any attempt to use this connector as a serial port will NOT
+function correctly and may cause damage to the Macintosh and/or the
+equipment being connected.
+
+The two serial ports of a Macintosh are mini-Din-8 connectors which are
+labeled with a telephone (the "modem port") and a printer ("printer port").
+This is the pinout of the serial connectors. We are looking at the back of
+the Macintosh (or alternatively at the BACK of a male plug):
+
+             Macintosh Plus Serial Connectors (Mini-DIN-8)
+
+       /------###------\         1 HSKo          Output Handshake
+     /        ###        \                        (Zilog 8530 DTR pin)
+   /                       \     2 HSKi / Clock  Input Handshake or extern clk
+  /     [|]   [|]   [|]     \                     (Depending on 8530 mode)
+ /       8     7     6       \   3 TxD-          Transmit data (minus)
+|                             |
+|                             |  4 Ground        Signal ground
+|     ===       ===    ===    |
+|      5         4      3     |  5 RxD-          Receive data (minus)
+|                             |
+|                             |  6 TxD+          Transmit data (plus)
+ \----+    ===   ===    +----/
+  \###|     2     1     |###/    7 GPIn          General purpose input
+   \##|                 |##/
+     \|                 |/       8 RxD+          Receive data (plus)
+       \------###------/
+              ###
+
+Note this is a RS-422 interface so the signals come in a balanced pair, a
+positive (plus) and a negative (minus), for each data signal. As we shall
+see below, there is an easy method for matching this to RS-232. Also note
+that the General Purpose Input on pin 7 is not implemented on the Mac Plus
+or earlier machines.
+
+We have given up soldering our own mini-Din-8 connectors. They cost $3.75
+and they are just the pits to work with. We now buy 12 foot mini-Din-8 to
+mini-Din-8 cables for $10.00 from the Diskette Gazette people and cut them
+in half. Voila, two 6 foot mini-Din-8 to bare wire cables for $5.00 each. We
+solder on the DB-25 side and do the wire permutations there.
+
+On the original 128K and the 512K upgrade machines (which have a DB-9
+connector instead of the mini-Din-8) the Output Handshake line was held in a
+"marking" condition by hardware (a small resistor to the appropriate power
+supply rail). On later Macintoshes there are logic and a line driver for
+this line. This change introduces the following incompatabilities:
+
+  1. SOME of the older terminal programs don't have the code to explicitly
+     drive HSKo high.
+  2. SOME terminal programs drop HSKo when they close down.
+  3. SOME modems require DTR and will drop carrier if DTR goes away.
+
+If the cable design given below, mapping HSKo to DTR, is used, there are two
+recognized pathological conditions which can happen:
+
+  A. Cannot use modem at all, because of 1 and 3 together.
+  B. Modem drops out when switching between terminal programs, 2 and 3
+     together.
+
+Of course, some people consider B a feature, in that it will hang up the
+phone when you switch off the computer. Personally, I hang up the phone when
+I am done and I like to switch from terminal program to terminal program. If
+one of the above conditions happen, there are only three alternatives.
+
+   * If at ALL possible, set your modem up to IGNORE DTR and stay connected.
+     Look for a DIP switch for this. I personally made this choice.
+   * Use only terminal programs which "properly" drive HSKo. You get to
+     operationally define "properly" :-)
+   * Drive DTR from DSR at the modem end of the cable, as described below.
+
+Macintosh to modem (or other DCE device) NO HARDWARE HANDSHAKE:
+
+       DIN-8 MALE                       DB-25 MALE
+
+       GROUND 4 O--+--------------------O 7  GROUND
+  RECV DATA + 8 O--+
+
+  RECV DATA - 5 O-----------------------O 3  RD (Receive Data)
+
+  XMIT DATA - 3 O-----------------------O 2  TD (Transmit Data)
+
+HANDSHAKE OUT 1 O--+
+HANDSHAKE  IN 2 O--+--------------------O 20 DTR (Data Terminal Ready)
+
+Note that in RS-232 the data signals are inverted (marking is minus) while
+the control signals are not (marking is plus). Thus the transmit data minus
+signal from the Mac is just right for driving the modem. Leave the transmit
+data plus signal disconnected. If you ground this you will short out a
+driver, and it will probably get hot. Similarly the receive data signal from
+the modem/DCE is inverted, so it can drive the Mac's receive data minus
+line, but in this case the receive data plus line is grounded to prevent any
+extraneous signals from being induced into the circuit.
+
+Note also that we are driving both HSKi and DTR from HSKo so the problems
+described above can happen. An alternative arrangement would drive these
+signals from the modem/DCE's source of DSR, like this:
+
+
+                                     +--O 6  DSR (Data Set Ready)
+HANDSHAKE  IN 2 O--------------------+--O 20 DTR (Data Terminal Ready)
+
+Some dumb modems might require Request To Send (RTS) which one would wire
+like this:
+
+                                     +--O 6  DSR (Data Set Ready)
+HANDSHAKE  IN 2 O--------------------+--O 20 DTR (Data Terminal Ready)
+                                     +--O 4  RTS (Request To Send)
+
+Finally, if you have only 3-wire cable and don't need DTR shutdown, you can
+wire each side to be happy like this:
+
+HANDSHAKE OUT 1 O--+                 +--O 6  DSR (Data Set Ready)
+HANDSHAKE  IN 2 O--+                 +--O 20 DTR (Data Terminal Ready)
+                                     +--O 4  RTS (Request To Send)
+
+Macintosh to modem (or other DCE device) WITH hardware handshake:
+
+       DIN-8 MALE                       DB-25 MALE
+
+       GROUND 4 O--+--------------------O 7  GROUND
+  RECV DATA + 8 O--+
+
+  RECV DATA - 5 O-----------------------O 3  RD (Receive Data)
+
+  XMIT DATA - 3 O-----------------------O 2  TD (Transmit Data)
+
+HANDSHAKE  IN 2 O-----------------------O 5  CTS (Clear To Send)
+
+This cable connects the modem's CTS back to the Macintosh's input throttle
+HSkIn so the modem can throttle the Macintosh as needed.
+
+HIGH SPEED MODEMS:
+
+Many of the newer modems now do data compression and/or data rate conversion
+and so there is now a need for the computer and modem to be able to
+(temporarily) throttle output from each other. While there is a way defined
+in RS-232 for the modem to throttle the computer, there is no defined way
+for the computer to throttle the modem.
+
+Vendors seem to have walked away from strict RS-232 in that they have
+redefined the meaning of the RTS (Request To Send) signal! This signal used
+to be used to tell the modem to acquire the communications medium for
+OUTPUT. Now it is being used to tell the modem that the computer is ready to
+take INPUT.
+
+HANDSHAKE OUT 1 O-----------------------O 4  RTS (Request To Send [sic])
+
+Thus this cable connects the Macintosh's ready signal HSkOut into the
+modem's RTS. Thus the Macintosh can throttle the modem when necessary.
+Depending on the program running on the Macintosh you may need to manually
+turn on handshaking by issuing the appropriate control call to the serial
+driver.
+
+Lack of this wire usually causes the modem to be unable to send to the
+Macintosh. Sometimes the modem will ignore the signal when in command mode
+but require it when in data mode. The symptom here will be that the modem
+will answer commands and connect but will then act like the data receiver
+circuitry is disfunctional. If you need to know when the phone line is
+dropped (like for a bulletin board program that wants to know if it needs to
+ask for a password again) and you have a later model Macintosh that
+implements GPIn, you might want to wire DCD (Carrier Detect) into the
+general purpose input:
+
+Gen Purp. In  7 O-----------------------O 8  DCD (Carrier Detect)
+
+There is a Macintosh Technical Note describing the use of GPIn.
+
+Macintosh to terminal (or other DTE device):
+
+       DIN-8 MALE                      DB-25 FEMALE
+
+       GROUND 4 O--+--------------------O 7  GROUND
+  RECV DATA + 8 O--+
+
+  RECV DATA - 5 O-----------------------O 2  TD (Transmit Data)
+
+  XMIT DATA - 3 O-----------------------O 3  RD (Recieve Data)
+
+HANDSHAKE  IN 2 O-----------------------O 20 DTR (Data Terminal Ready)
+
+The same analysis applies with respect to the data signals, except that in
+this case the transmit and receive are switched around, since one guy's
+transmit should be the other guy's receive and vice versa. Note receive data
+plus is again grounded while transmit data plus is left disconnected.
+
+For this particular cable we have wired the terminal/DTE's DTR back into the
+Macintoshes HSKi to implement a hardware handshake. Assume the terminal side
+is a printer that is being overrun. One of the things these printers can do
+is drop DTR. By wiring it through to the handshake input we make it possible
+for the Macintosh software to temporarily pause in sending, until the
+printer's buffers empty out and the printer reasserts the DTR signal.
+
+Some terminal devices may need to see DSR (Data Set Ready) or CD (Carrier
+Detect) or CTS (Clear to Send), in which case they may be driven from an
+appropriate source.
+
+                                     +--O 20 DTR (Data Terminal Ready)
+This is probably appropriate         +--O 6  DSR (Data Set Ready)
+for a communications terminal        +--O 8  CD  (Carrier Detect)
+in which DTR is a totally static
+signal and does not move.            +--O 4  RTS (Request To Send)
+                                     +--O 5  CTS (Clear To Send)
+
+or
+
+                                     +--O 4  RTS (Request To Send)
+This is probably appropriate         +--O 6  DSR (Data Set Ready)
+for a printer that flaps DTR         +--O 5  CTS (Clear To Send)
+as the buffer fills and empties.     +--O 8  CD  (Carrier Detect)
+
+The logic is to drive from whichever of DTR or RTS is NOT flapping around as
+buffers fill and empty or as the terminal transmits and receives...
+
+To connect directly to an IBM PC we believe CD must be asserted. That is, an
+IBM PC will not accept data unless it also sees the CD signal.
+
+IBM PC to Apple LaserWriter
+
+Yeah, this is a strange little topic, but we figured out how to do it so I
+thought I would throw it in. Thanks to Mike Petry and Steve Ostrove for
+figuring out how to do this.
+
+                 IBM PC (DB25)                 Apple LaserWriter (DB25)
+
+      (Transmit Data) TD   2 O-----------------O 3  RD (Receive Data)
+       (Receive Data) RD   3 O-----------------O 2  TD (Transmit Data)
+      (Clear To Send) CTS  5 O-----------------O 20 DTR (Data Terminal Ready)
+
+     (Data Set Ready) DSR  6 O--+
+     (Carrier Detect) DCD  8 O--+
+(Data Terminal Ready) DTR 20 O--+
+
+      (Signal Ground) GND  7 O-----------------O 7 GND (Signal Ground)
+
+Note that the PC's DTR is used to make it think there is a modem connected
+and turned on (DSR) and that a carrier is present (DCD). The LaserWriter's
+DTR is used to throttle the PC's output using its CTS input.
+
+CLASSIC MACINTOSH
+
+Somebody on comp.sys.mac.hardware asked for cables for a Classic Mac! I
+didn't know there were any more of those out there!!! :-) Here are the
+corresponding connections, please use these in conjunction with the analysis
+and suggestions provided above:
+
+Classic Macintosh to modem (or other DCE device):
+
+      DB-9 MALE                       DB-25 MALE
+
+     GROUND 3 O--+--------------------O 7  GROUND
+RECV DATA + 8 O--+
+
+RECV DATA - 9 O-----------------------O 3  RD (Receive Data)
+
+XMIT DATA - 5 O-----------------------O 2  TD (Transmit Data)
+
+ + 12 Volts 6 O--+
+  HANDSHAKE 7 O--+--------------------O 20 DTR (Data Terminal Ready)
+
+Classic Macintosh to terminal (or other DTE device):
+
+      DB-9 MALE                       DB-25 FEMALE
+
+     GROUND 3 O--+--------------------O 7  GROUND
+RECV DATA + 8 O--+
+
+RECV DATA - 9 O-----------------------O 2  TD (Transmit Data)
+
+XMIT DATA - 5 O-----------------------O 3  RD (Receive Data)
+
+  HANDSHAKE 7 O-----------------------O 20 DTR (Data Terminal Ready)
+
+FINAL CLOSURE
+
+On the DB-25 pin 1 is the FRAME ground and pin 7 is the SIGNAL ground.
+Equipment that requires connection to pin 1 is badly designed (IMHO). As a
+very last resort you might try a 1 to 7 jumper.
+
+As you can imagine from seeing all these alternatives, an RS232 breakout box
+is real handy, since you can try all these patches without having to warm up
+a soldering iron. The only other thing I can say is:
+
+     IF IT DON'T WORK, DON'T LEAVE IT TURNED ON LONG ENOUGH TO GET HOT!
+
+Communications driver chips are built very ruggedly and will stand an
+amazing amount of mistreatment for a short period of time. But if you let
+two drivers fight for an hour one or both of them will burn out...
+
+I've read this over a dozen times to make sure there aren't any totally
+glaring errors, but I cannot be responsible for anybody's smoked hardware.
+Let's be careful out there!
+
+Ben Cranston <zben@ni.UMD.EDU>
+Network Infrastructures Group
+Computer Science Center
+University of Maryland at College Park
+of Ulm
+----------------------------------------------------------------------------
+Back to ZBEN's home page.

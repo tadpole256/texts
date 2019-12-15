@@ -1,0 +1,938 @@
+
+
+
+
+the  original
+macquarium
+^
+v  o  l  u  m  e    4
+^
+In  Which  Doris  Gets  Her  Oats
+And The Heavens Rumble With
+Our Lord's Keen Displeasure
+copyright © 1992 by Andy Ihnatko	version 1.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+There is nothing on this page. Nothing, I say! If you know what's good for
+you you'll forget all about this and proceed to the next page. That's
+rightäjust keep moving.
+
+
+HEREIN WE HUMBLY RELATE FOR YOUR ILLUMINATION
+The Delineage Of This Selfsame Document
+
+1.0	Initial release. Girlfriend reads, says "This is what you've been
+working on for the past two months?!". Dumps author.
+1.1	Deleted information on bypassing rotating steel knives at end of
+escalators at South Station MBTA terminal, Boston.
+1.2	Deleted passage concerning TV weatherman Willard Scott, deemed by
+counsel to be "Too actionable for widespread publication, though 100%
+accurate in every conceivable detail"
+1.3	Author breaks MacQuarium tank while making adjustment. Specifications
+modified to add extra half inch safety margin in depth of tank.
+
+Herein  we humbly delineate for your benefit
+The Contents Of This Selfsame Document
+
+1	Legalese and Disclaimer
+2	Background/Preface
+3	What You'll Need
+4	Construction: The Shell
+5	Construction: The Tank
+6	Outfitting The MacQuarium
+7	Setting Up The MacQuarium
+8	A Vague Education on Elementary Fishery And the Upkeep of our Gilled and
+Scaled Brethren
+APPENDIX: Abbreviated Directions
+Colophon
+1	Legalese and Disclaimer
+This document and the file(s) accompanying are copyright © 1992 Andy
+Ihnatko and ARE NOT PUBLIC DOMAIN. Permission to distribute this package is
+automatically extended to the groups listed in the following two bulleted
+paragraphs:
+*	Compuserve and ZiffNet/Mac. On-line services other than Compuserve and
+ZiffNet/Mac may also make this package available to its users, provided its
+users may download it at no charge beyond normal on-line access charges and
+all files in this package are distributed intact and in their original,
+unedited form.
+*	Recognized nonprofit organizations. User groups and individuals may sell
+these plans for the cost of the diskette and a nominal duplication fee,
+provided that all files in this package are distributed intact and in their
+original, unedited form.
+Distribution by commercial organizations (such as but not limited to
+for-profit vendors and publishers of commercial and shareware/public domain
+software) is EXPRESSLY FORBIDDEN unless the specific written consent of the
+author is obtained beforehand. This package may not be used as an
+enticement for the purchase of another product or service.
+Construction and sale of a completed MacQuarium or kit of parts for any
+amount of money beyond strict cost of materials is also EXPRESSLY FORBIDDEN
+unless the specific written consent of the author is obtained beforehand.
+The author may be reached via mail at 33 Marshall Street, Westwood, MA
+02090; via ZiffNet/Mac as 72511,204; via the Internet as
+andyi@world.std.com; and via America Online as andyi.
+This package is provided as-is totally without warrantee of any kind,
+expressed or implied. Any damages or losses of any kind suffered as a
+result of the information in this package are not the responsibility of the
+author.
+God Save The Queen. All others please unload and check the breech before
+cleaning firearmsä
+
+2	Preface/Background
+It all started innocently enough. Someone wrote in to MacUser's Help Folder
+column (written by yours truly and Bob Levitus truly) with a question
+regarding "The best way to upgrade a Mac 512." Seeing an opportunity to
+make a weak joke and eat up about 8% of my word count besides, I suggested
+that the only useful upgrade for a Mac 512 would be to turn it into an
+aquarium.
+Had I been paying attention in my 10th grade social studies class, I would
+now be able to mention the assassination of someone at somewhere, a small
+event that nonetheless had monumental, grotesque repercussions, namely
+World Wars I and II and the Cold War, just for starters. In tenth grade,
+however, I had all of my elder sister's notes, term papers, and exams. Our
+teacher, remarkably, hadn't changed a single homework assignment or exam
+question in six years, so I managed to cop an A without bothering to learn
+so much as the teacher's name.
+But I digress. The point is, an avalanche of mail resulted. All right,
+eleven letters. But clearly it was a mandate from the masses, eleven of
+them at any rate, and so I set forth to design and build The MacQuarium.
+The MacQuarium is actually a custom-made glass fish tank (capacity: two
+gallons give or take a hectare) made to fit on top of a small platform
+inside any Macintosh shell with a Classic form factor. The MacQuarium is
+known to be compatible with the Mac 128, 512, Plus, and SE, and is assumed
+to work with a Classic or Classic II shell. No amount of begging or
+pleading could convince Apple to send me one for free, and frankly though I
+love my job, if I'm going to blow $799 it's going to be on a Laserdisk
+player or a subwoofer or a complete set of Sandman comics. I'm sorry, but
+there it is.
+I set about my chosen task with four design imperatives firmly in mind:
+*	There must be no visible waterline. I've seen several half-hearted
+attempts at aquarium conversion where there's two inches of dead space in
+the monitor cutout. That's good enough for government work but dammit, this
+is America, or the little bits of it we've got left in working order,
+anyway, and since there was nothing good on TV for weeks on end, I worked
+around this crippling limitation.
+*	Nothing must obstruct the disk-drive slot. This is so you can see the
+little fishies poking their noses at the open slot, which is just so damn
+cute you'll want to hang yourself.
+*	There must be the ability to install one of those little divers with
+bubbles coming out of his head, or a treasure chest with the skeleton of a
+drunken pirate in it that waves a bottle of rum, or any other classic
+aquarium action toy that compensates for having to clean up fish doo doo.
+*	Oh, yes, the cost. This is all technically tax-deductible for me (and I
+technically got paid for it, tooäLord, I love this country) but a $150
+MacQuarium would probably be a hard sell to your boss, spouse (or both, if
+applicable). Cost of a minimally configured MacQuarium must be under $30,
+not including the Mac shell.
+Happily, the MacQuarium meets all four of these demanding criteria. The
+only drawbacks:
+*	May violate your Apple warrantee or AppleCare extended warrantee. If you
+bring your Mac in for repair, don't let on that you've made modifications
+to it and maybe they'll still honor the warrantee.
+*	Incompatible with A/UX 3.0 and Microsoft Word 5.0. Then again, so is
+everything else.
+*	Fish way too small to eat, can only be part of chowder.
+On the plus side, the MacQuarium upgrade is the cheapest way to get color
+on a Classic-architecture Mac. After Dark is a neat screen saver, sure, but
+frankly it looks like a cartoon or something compared with the MacQuarium.
+Next to finally, How Much You Are Expected To Pay For This Document. As
+disgustingly detailed in the Legalese and Disclaimer section, this package
+is free (though NOT public domain) and if you paid anything beyond a disk
+duplication fee or normal downloading charges for it, I'd very much like to
+know about it. However, if you think this MacQuarium package is worth
+something, then please go down to your local Red Cross chapter and donate a
+pint of blood. It doesn't hurt a bit (outside of a quick pinch), it quite
+literally might save a life, and they give you name-brand juice and cookies
+afterward.
+Finally, your feedback is appreciated. Questions, comments, corrections, or
+whatever, contact me on the Internet (preferably) as andyi@world.std.com.
+Really finally, and the most serious part of this document: do keep in mind
+that goldfish, dim as they are, and they are plenty dim, really, are living
+creatures. Please do not attempt this project if you are not willing to
+take good care of your fish until they die of old age. If you don't like
+the idea of feeding fish every day and cleaning a tank every month, you
+should either forget the idea entirely or resign yourself to stocking the
+MacQuarium with some sort of mock-fish. Carrots probably will work fine
+underwater.
+
+3	What You'll Need
+Shell	*	Any Macintosh with a Classic form factor.
+*	Hacksaw blade, chisel and file, drill (optional)
+Tank	*	Five custom-cut panes of 1/8" window glass
+*	Masking tape
+*	One tube of silicone adhesive
+*	A 4' by 12" plank of 1/2" thick number two pine (or any other piece of
+wood suitable for building a small platform)
+Aquarium	*	Fish
+*	Air Pump, Air tubing	
+*	Filter
+*	Gravel
+*	Light
+*	Thermometer
+*	pH test kit
+*	Tap water conditioner
+*	Food
+*	Check valve
+*	Gang valve
+*	Air stone
+*	Water
+*	Tchochkes for tank (little diver, fake plants, severed hand, castle,
+etc.) - Optional
+
+4	Construction: The Shell
+Preparing the shell is your first step on the journey towards MacQuarium
+ownership for a simple reason: it's a royal pain in the semprini. The idea
+is, if you give up here, you won't have already spent all that money on the
+glass and aquarium supplies.
+(No matter what order you decide to perform these steps in, it's strongly
+advised that you buy the fish last. Fishy survival in one of those little
+plastic bags is estimated at something like four hours, rather less than
+the three days it'll take you to finish building the MacQuarium. Killing
+fish needlessly leads to unsightly buildup of bad karma and should be
+avoided if at all possible)
+Anyway, it's not all that much work, really; it's just a serious a slow,
+tedious little details that must be attended to, and much time spent sawing
+off all the bits of the shell that only get in the way of the fish tank.
+OK, onward.
+
+Securing a Shell
+Certainly the shell itself is the only unusual component of the MacQuarium,
+but nonetheless it shouldn't be hard to find. The easiest way to secure a
+Mac shell for yourself is to contact one of the following companies and
+simply order one:
+Pre-Owned Electronics
+205 Burlington Road
+Bedford, MA 01739
+(800) 274-5343
+Shreve Systems
+3804 Karen Lane
+Bossier City, LA 71112
+(800) 227-3971
+
+Both outfits specialize in Macintosh parts, components, etc. and have been
+around for a long time. The median price for a good Mac 512 shell is about
+$40 or so.
+Credit Where Credit's Due / Revealing Possible Conflicts Of Interest
+Department: I hereby humbly thank Pre-Owned Electronics for their generous
+donation of Mac shells for this project. As soon as I mentioned that I was
+looking for something I could turn into an aquarium, they up and offered to
+send me the stuff for free if I'd just give 'em a list of instructions when
+I was doneäthis even before they found out I was a writer. If only support
+for projects like the Supercolliding Superconductor and the Orange Julius
+On Betelgeuse could've found such eager, Queen Isabella-like support so
+easily in the private sectorä
+The only way you can get a shell cheaper is to rummage through closets and
+the desktops of the less-popular people in your dorm or office for outdated
+Macs no one has any chance of using. You'll also have luck at electronics
+flea markets, where a D.O.A. Mac 512 can be picked up for $20 if it's in
+truly sorry shape. Also try hopping on a local BBS and try to scare up a
+rigormortified Mac someone's willing to sell for parts. As with many
+computer items, often you'll find that local system administrators are more
+than happy to trade an old 512 or Plus for a week's worth of beer money for
+the office.
+Kids, be sure to get your parents' permission before turning Mom and Dad's
+computers into MacQuariums.
+OK, now which Mac to aquarify? I'd suggest a Mac 128, 512, or Plus. They
+have all those great ventilation slots up at the top, so as aquariums
+they'll allow maximum ventilation into the tank; the 512 and 128 are far
+less useful, of course, so when you make the inspired joke "It was the only
+productive thing I could do with it!" you'll be rewarded with big atomic
+laffs and yucks instead of stony, confused silence; finally, this document
+provides modification instructions specifically for the Plus, 512, and 128.
+Those of you aquarifying an SE or Classic will have to wing it a bit at
+some point.
+
+Preparing the Shell
+The first step is easy. If you're converting an existing Macintosh, open
+the case and remove the logic board, analog board, CRT yoke and assembly,
+disk drive(s), hard drive, and frame. Discard.
+Seriously, if you're converting an existing Mac and it's been powered up
+within recent memory, for Tarim's sake be careful of the CRT. Even if it
+was unplugged a long time ago, the CRT can still contain enough juice to
+electrocute you and eight friends besides. Buy any of Larry Pina's neato
+books and Macintosh repair and upgrades for instructions on how to
+discharge all that pent-up electricity safely.
+Now then. If you bought a shell alone, it will almost definitely arrive
+empty. All you'll have to do is remove a single metal platform, which
+during life was used to support the logic board, CRT and drive cages, and
+pull out a loose bit of RF shielding. Discard all.
+Actually, because it's all steel and latticed, that rack makes a great
+solar toaster. Leave it in the sun for a while, then set some bread out on
+it, and in an hour or two, bang! You've got toast. Just another way of
+leaving the environment in that much better shape for our children.
+Once you've removed everything inside the shell that isn't (a) plastic and
+(b) a fundamental part of the shell itself, you're all set to start sawing
+away. This is that slow, dull, tedious part I mentioned earlier.
+The implement of destruction here will be an unadorned hacksaw blade. You
+have to work the blade into a lot of tight spaces, you see, and you'll also
+have to take advantage of the bendiness of the naked blade to complete
+certain incisions, so the handle will only get in your way.
+Unless you want to spend your remaining time on earth vacuuming up hateful
+piles of beige/platinum plastic sawdust, do your work in the garage or set
+down a bunch of newspapers in your work area. You might also guess that
+it'd probably be a bad idea to wear a shaggy sweater, too. When you're
+cutting, saw in short, manageable strokes and save all your strength for
+the pull stroke, which does all the actual cutting. Have a six-pack of
+something cold and refreshing on hand, and renting a movie or three
+wouldn't be a bad idea, because you're in for true wing-ding of an evening.
+Deep breath now. Your first job is to work on the front plate. The tank's
+front is a flat piece of glass angled back to fit nice and kentucky against
+the entire top section of the front plate, right above the spot where the
+plate bends like an "L". To make sure that the front of the tank can
+snuggle as close to the monitor cutout as possible, we have to remove every
+bit of plastic that sticks up past the highest elevation of that cutout.
+Otherwise, the glass in the assembled tank will sit a centimeter or so away
+from the cutout and your MacQuarium will fool nobody.
+Those of you working on a Plus/512/128 shell, just diligently saw down all
+the bits marked in white on this here sketch, down past the elevation of
+the monitor cutout (scale and relative positions has been jiggered around a
+bit for clarity):
+
+
+Everyone else will have to wield their hacksaw blades as I did that very
+first time, getting a cutout-eye view of the front plate and hacking off
+anything that looks even remotely suspicious. The only bits that should
+certainly be spared the sting of your blade are the little tabs around the
+very outermost perimeter of the front plate. These will sit outside the
+edges of the tank and will help you align the tank properly inside the
+shell.
+By the time you finish with the front bezel, you should have put away
+almost half of the six pack, made it all the way through Star Wars and are
+now at the bit in Empire Strikes Back where the Millenium Falcon is in the
+cave, only it isn't really a cave, it's a giant mutant space slug, andäah
+but I'm getting away from myself again. On to the back portion of the
+shell.
+The only thing we have to do to the back portion of the shell is completely
+remove the handle-well at the top. The well dips down two whole inches into
+the case, thus making a nice high waterline impossible, plus with that
+thing gone we'll have a nice, neat hole through which we can feed the
+fishies and install a tank light. If you're still unclear on what needs to
+be done, this expensively-produced infographic shall make it plain:
+
+Get the picture? Okey-doke. As you look into the back from the inside,
+you'll see two rod-like lengths of plastic running down the ceiling toward
+the well (this is where those two deeply-recessed Torx screws used to go).
+Starting by holding your hacksaw blade flush against the ceiling and sawing
+back and forth, cut all the way down until you make it to front edge of the
+"basket" itself - the box that makes up the handle's recess. Fortunately,
+the rods are molded to the ceiling on two narrow rails of plastic, so if
+you lay the shell down with the front facing up, you should find it pretty
+easy going.
+Once you've cut all the way down to the basket, your next step will depend
+on how dainty your hands are. If you're good at maneuvering in tight
+spaces, you can cut right through the front edge of the basket and then
+continue through . By holding the blade flat against the ceiling you should
+be able to make it all the way through the basket, out between the two
+"lobes" of the top of the case, straight back to the first sharp downangle
+of the ceiling. But if such a feat of dexterity is beyond you, just cut off
+those two long plastic posts where they meet the basket and get them out of
+the way. You should then have an unobstructed path through the basket and
+thence to that downangle.
+No matter how you get to that turn, there's a little trouble awaiting you.
+You have to continue the cut about 120ödown to follow the contour of the
+handle well, so a little trickery is needed. You could saw out what you can
+of the basket, then use the extra space to maneuver the blade along as best
+as you could manage, but the easiest solution is to drill a hole at both
+corners, a bit wider than the sawblade, then complete that angled cut from
+outside the shell. The rounded inside corners this technique leaves behind
+can be removed with a file or a good, sharp chisel.
+Your almost-final cut is through those last four inches along the back of
+the basket. Again, superior swordsmanship can save the day, but the
+simplest way to make the cut is still to just drill a hole somewhere along
+the middle and then cut outwards from there. If you managed to cut out the
+basket in one solid piece, it should fall out in your hand. I will
+understand completely if you can't resist the temptation to fit it onto
+your hand and swoosh it through the air making WHOOP! WHOOP! noisesäafter
+all, it looks almost exactly like a fightership from Next Generation or
+something. Those of you who aren't in touch with your Inner Child may
+choose to reflect that it'd make a handy little planter or better yet a
+receptacle for your change in the car.
+All that remains of the handle at this point is a ridged strip of plastic
+at the front edge, roughly an inch deep by four inches wide. The more
+adventurous types will want to remove that piece, too; you'll have another
+inch of access and you'll be able to mount your aquarium light another inch
+closer to the front, where it can do more good.
+Whether you wimp out on that final piece of not, you're nearly done
+preparing the shell. As a final step, take a file or a piece of medium to
+fine sandpaper and take the burrs out of the edges of the cuts you made.
+Also use a file or a chisel to straighten out and Deviations From Perfectly
+Straight Lines you may have made, if you're a stickler for that sort of
+thing. And don't think you're so superior if you are because you're not.
+
+5	Construction: The Tank
+Ah, the Tank! Serendipity incarnate. While preparing the shell required
+loads of backbreaking labor, building the tank itself mostly involves
+sitting comfortably reading a good book, watching TV or engaging in any of
+dozens of other leisure activities while other bipeds and chemical
+processes do most of the actual work for you. It should be pointed out, in
+all fairness, that while working with the shell was dull and arduous, there
+was only a slim chance of accidentally slashing your wrists so badly that
+the arriving paramedics would be rushing to get your driver's license out
+of your pants before the bloodstains make it so unreadable that they have
+to identify you by dental records.
+Section five and I'm talking about slashed wrists and dental records. I've
+been working on this project far too long.
+Anyway, all you need to do is go to your local hardware store or home
+center and have some 1/8" window glass cut to the specifications I provide
+you, then assemble the actual tank with silicone adhesive. That's rightäno
+frame, no support rods, nothing but glass and silicone.
+First, the glass. On the next page you see a list of all the pieces you'll
+need. Hopefully, there'll be a shop somewhere nearby where you can just
+hand over those two pages and pick up your glass an hour later. Any store
+that cuts glass will have no problems with three of the five pieces that
+make up the tank; they're all nice, friendly rectangles, and most shops
+have a jig all set up for making perfect right angles of any size. No, it's
+the side pieces that might cause a panic or two among the less-studly glass
+franchisees; they're right trapezoids, with only two right angles, so
+cutting those two panes will take (gasp!) actual, intelligent thought on
+the part of the person cutting the glass. As such, many places will just
+turn you away. Be persistent and keep looking around. In my travels, the
+most foolproof sources of good glasscutters are shops that specialize in
+glass and could cut you a mirror in the silhouette of Abraham Lincoln if
+you so desired. They tend to charge an arm and a leg. Instead, look for
+little hole-in-the-wall hardware stores, where the employees are typically
+related to the owner and (gasp! yet again) actually care about doing a job
+properly.
+The thing is, though, none of the glasscutters really have anything to
+worry about. Hand over the template and they'll realize that making the two
+trapezoids requires nothing more than cutting a plain rectangle, drawing a
+diagonal line on it at a specific point, then pulling the cutting bar down
+that straight line. Trivial.
+
+Side Panels:	Cut from 9 1/2 " x 14 7/8 rectangle of glass, two pieces
+total. From drawing (drawing is to scale):
+
+
+Front:	One pane 8 1/4" x 9 9/16"
+Back:	One pane 8 1/4" x 9 3/8"
+Bottom:	One pane 8 1/4" x 7 3/4"
+
+Five pieces (total) in order. All glass is 1/8".
+For good measure, take the plan for the side pieces and draw a full-sized
+template on a sheet of newsprint. It's a simple thing to draw - I mean,
+draw a rectangle, then draw a line from seven inches down on one side to
+seven inches up on the other - and the glasscutter will be able to just lay
+the glass on the rectangle and trace over the dividing line.
+You can expect to pay eight bucks or so for those five pieces of glass.
+Considering how cheap the glass is, you may want to have two sets made up,
+just in case something from the first set breaks.
+When you get your cut glass back, you'll notice the difference between this
+stuff and the kind that put in coffee tables and aquariums: your glass is
+still mighty sharp around the edges. Be careful when handling the glass
+during assembly at all further stages.
+Yes, mother. Continuing. Before you permanently assemble all this glass,
+you ought to put the tank together dry, with masking tape, to make sure
+they're of the correct size and that you know how they fit together. That
+second bit is way important. The glass is an eighth of an inch wide, so if
+you fit the pieces together incorrectly (lay the back panel on top of the
+edges of the two side pieces, rather than between them, say) you'll wind up
+with a tank that's a whole quarter-inch out of whack. Use this assembly
+guide:
+:
+From the guide, you can see that the side panels are supposed to go on top
+of everything else, while the back panel is surrounded by glass on all four
+sides.
+While you have the aquarium taped together, take the opportunity to label
+each pane with masking tape so there'll be no mistakes when you finally
+bond all that stuff together. The back and bottom panels lookalmost
+identical, but if you mix them up you won't get a good, tight fit.
+The final step before actually assembling the tank is to give all of its
+interior surfaces a good cleaning with a moist cloth. It's easier to clean
+it now that when it's all assembled, so clean it now. Be sure to use
+nothing but warm water and maybe a pinch of salt. It's tempting to grab for
+the Windex to get rid of all the fingerprints the glass has accumulated,
+but soap and other chemicals have a nasty habit of killing fish.
+Now you're ready to finally, permanently, truly, madly, deeply build the
+tank. The sole material needed to bond the glass together and form a
+strong, watertight tank is a tube of silicone adhesive. Go ahead and
+smirkäI was skeptical too. Nonetheless, it turns out that even with nothing
+but silicone holding it together, a small tank is plenty strong. My
+MacQuarium's been running for three months straight without a single leak.
+But be careful when you shop for adhesive; not all silicone adhesive is
+safe for fish. The stuff you generally buy in a caulking tube for sealing
+around a bathtub or a boat usually contains chemicals that, again,
+instantly teach fish how to float. Furthermore, a lot of that stuff doesn't
+even work underwater. Be sure to look for silicone adhesive specifically
+designed for aquarium use.
+Some notes on silicone adhesive. First, it can be nasty stuff if you use it
+improperly. As it cures, it gives off gaseous acetic acid, so be sure to
+only use it in a well-ventilated room. It's an irritant, so try to keep it
+off your skin as much as possible; if you're making more than one tank at a
+time, wear rubber gloves. Even after putting together just one MacQuarium
+tank your fingertips will start to tingle a bit. Wash your hands after you
+finish up and for heaven's sake don't rub your eyes or any other sensitive
+body part until you've gotten the stuff off your hands.
+Okay. Choose your work area carefully, because putting the tank together is
+a two-day, two step process and you can't move the tank until it's
+absolutely finished. The first step is just to bond the panels together to
+make a basic box. Later, you go back in and make the box waterproof. Take
+it just one goal at a time.
+Cut the very tip off the nozzle that came with the adhesive so you can
+apply a nice, thin bead (about 1/16" or so) of adhesive. Practice your
+adhesive-application technique on a piece of scrap until you can lay down a
+neat, consistent bead of gunk. Lay down the first side piece on your
+workspace and apply a thin bead across the three edges (facing UP) that'll
+be bonded. A consistent, thin bead is more important that a huge glob of
+goo that skips all over the place.
+When the silicone leaves the tube, you have roughly five minutes to jockey
+your glass into position before the stuff starts to set up, so get
+cracking. The problem is, silicone doesn't stick to silicone; if it dries
+on the glass, that pane will be useless until you scrape that gunk off.
+Apply a thin bead to the back edge of the front plate. Place the front and
+bottom panes of glass on the side plate as if you were building a house of
+cards, easing their thin edges into and through the adhesive. Tweak them
+into position with your thumbs (carefully! remember the glass is sharp!),
+sliding them back and forth a tad to that the sealant contacts every part
+of every edge. After a few seconds, the three panes will be stable enough
+to stand on their own. Take this opportunity to nudge the glass a bit to
+get them as square and close to the edge of their mates as
+possibleäremember, the clock is running!
+You should still have plenty of time to put that back pane of glass in. Lay
+a bead of silicone on the bottom edge of the back pane (the edge that will
+be making contact with the bottom plate) and ease it into position as you
+did the other two pieces.
+Now you have a pretty solid four-sided shape. You've got all the time in
+the world at this point, as there's no strip of adhesive waiting to bond to
+a new piece of glass, so double-check the tank-in-progress to make sure all
+the corners are square and all the joints are straight.
+Let things stand for ten minutes or so, to let things firm up a bit and
+become a little more stable. After finishing off the last of that six-pack,
+prepare the remaining side piece the same way you prepared the first: apply
+sealant to the three edges of the pane. Carefully align the pane over the
+tank-to-be, and drop it down onto the glass edges. Make final adjustments
+for fit and square and you're done for the day. Go out and get yourself
+some wafflesäyou earned it.
+You now have 24 hours off, which is the amount of time the adhesive takes
+to form a strong bond. And boy, does it ever bond; if you put a dab of the
+stuff on a scrap piece of glass (useful, by the way, as a gauge for how far
+along the adhesive in the tank is in the curing process) there's just no
+way to get it off once it's set, short of a razor blade.
+The next day, make your way through the overpowering stench of vinegar
+(dammit! I told you to use it in a well-ventilated room!) and then
+waterseal that puppy like there's no tomorrow. Cut the next two notches off
+the sealant nozzle so you can apply a thick trail of the stuff, and squeeze
+a line of silicone into every joint inside the tank. Try to push the tube
+into the line of exiting adhesive, not trail behind it; that way you'll
+force more adhesive into the joint. When you've put a quarter inch or so in
+the cracks, use a finger or the rounded edge of a plastic card to smooth
+the silicone and work it further into the joint. At this stage you're
+making sure that the bloody tank won't leak, so make sure each joint is
+filled with solid silicone and has no air bubbles.
+The last part of the tank you ought to slather silicone all over is that
+sharp edge of glass on the top-rear of the tank. Air hoses will be snaking
+over this edge, as well as a power cord if you're using an AC aquarium
+light, so you want to be prevent the glass from cutting through something
+and causing problems.
+Now you have a whole 48 hours off, as you wait for the silicone to cure
+enough to become waterproof. Once your two days of rest are over, test out
+the tank (for the love of Mike, don't wait until you've put the fish in to
+discover that the tank leaks) in the bathtub. Set your tank down on an old
+newspaper on top of a solid, flat surface in your bathtub. Fill the tank
+with water and wait. If nothing starts leaking, well bully for you. Ten
+hours or so later, check again: if the water level seems to be right where
+it always was and you see no water stains on the newspaper, then
+congratulations! It's a fish tank!
+The tank is now, technically, ready to use. The adhesive needs another five
+days to become as strong as it's ever going to get, but in terms of being a
+watertight receptacle conducive for fishy life forms, your tank is a tank
+right now. You might, however, want to wait the week anyway, and a few days
+before the week is out apply silicone to all those sharp glass edges to
+make your MacQuarium just that much less of a silent implement of doom
+biding its time until its secret date with tragedy and more of a fun place
+to put fish. It's your call.
+
+6	Outfitting the MacQuarium
+You got the shell. You got the tank. Before we start tossing in fish
+willy-nilly, we have to buy some more junk, specifically, Everything Else.
+
+Platform
+As you may have guessed after hefting the completed tank in your hand
+Remember these important steps after you heft the completed tank in your
+hand:*	Use direct pressure to stop bleeding.*	Hold area of laceration
+above head.*	Press clean gauze into wound; add new gauze on top 	as old
+gauze becomes soaked with blood.*	If tourniquet is necessary, apply
+directly over branch 	artery and add pressure slowly. Write exact time of
+	tourniquet application directly on skin above tourniquet 	to aid medical
+personnel.*	Keep talking and treat for shock if able.
+As I was saying, it should occur to you that a small platform must be built
+to elevate the tank to its proper position. Early MacQuarium prototypes
+were tall, all-glass prototypes, but much like Alexander Graham Bell (who
+decidedto leave the juicer attachment off his telephone), this design
+element was abandoned. Cost of making the oddly-shaped side pieces was
+astronomical, plus it was very fiddly to construct and usually resulted in
+a leaky tank.
+Good riddance. By setting the tank on a wooden platform, we save money and
+trouble, and also make it much easier to tweak the tank's position within
+the shell. All you need to do is build a platform of some sort, with the
+following dimensions:
+Width:	8 1/2 "
+Height:	2 1/2 " (exactly the same as 6 CD jewel boxes, by the way)
+Depth:	7 1/2 "
+Actual design of the platform is unimportant, so long as the top is flat
+and solid. My platforms are built out of number two pine and look something
+like this:
+
+It's very helpful to use a platform that has a hole of some sort all the
+way through its width; when you're setting up the MacQuarium you can pass a
+length of cord through the platform which can be used to pull the tank out
+as easily as you can push it in. You'll see what I mean a little later on.
+
+Traditional Aquarium Junk
+From the Macquarium-specific we move to the aquarium generic: if you're one
+of those people who want your fish to live, you're going to have to spend a
+good piece of change on some fundamental aquarium accessories:
+Gravel	Provides an anchor base for installing fake plants and toys, also
+provides greater bottom surface area for friendly bacteria to grow. Also
+keeps the fish from freaking out in some way only icthyologists and other
+fish can understand. Ten pounds should do you fine. Available in several
+decorator colors.
+Filter	Scrubs the water clean of tons of nasty things, such as uneaten food
+and the afterages of the food that was eaten. Small filters designed for
+goldfish bowls work best in the MacQuarium. The filter of choice would
+either be a small, sponge-like filter that can be installed under the
+gravel, or a Penn-Plax cartridge filter that sticks to the wall of the tank
+with suction cups.
+Air Pump	Constantly pumps new, fresh air into tank water, thus putting off
+the fishies' inevitable date with the Reaper as much as possible. The air
+pump also goes into the filter and powers various action toys that work off
+air pressure. Pumps of about a dozen different power ratings are available;
+generally the second or third-least powerful pump in the store will work
+best with the MacQuarium.
+Air Tubing	Clear plastic hose, needed to hook the pump up to all the things
+it has to be hooked up to.
+Air Stone	This is a little porous stone you hook up to the air pump and
+bury under the gravel that generated a column or curtain of itty bitty
+bubbles. Looks way cool, also helps the fish.
+Gang Valve	A multiplexor of sorts. It takes the output of the air pump and
+splits it into a number of nozzles whose flow can be regulated with a
+valve. A three-way valve will be just fine for the MacQuarium and will
+allow the installation of one air-powered toy in addition to the air stone
+and the filter.
+Light	Kind of obvious. Penn Plax makes one called the Light & Warm which,
+when you saw off the little tab molded into the side of it, fits absolutely
+perfectly into the space on the shell once occupied by the handle. Other
+lights might fit, too, but be careful to get a good fit as it's an
+electrical device and really doesn't cotton to falling into water at all.
+Check Valve	A little plastic valve you put in the air tube between the pump
+and the gang valve that prevents water from flowing from the tank through
+the hose to the pump, where it can cause an electrical short and from
+thence, in theory, a fire. Without one of these, you'd have to keep the
+pump above the water line, which is no fun.
+Thermometer	The kind that stick-on are the best, and don't worry too much
+about getting one that's hyper-accurate. The point of the thermometer is to
+give you something to look at and worry over when it's the fourth day of 90
+degree weather outside and you're curious about whether your fish will die
+soon or not.
+Food	Any kind of flake food will do just fine, though some fish fanciers
+suggest buying some brine fish treats too, forvariety. Honestly, I can't
+taste the difference at all.
+Tap Water Conditioner	There's a lot of chemical nastiness in tap water -
+chlorine, metals, and the like - that are near-instant death for your fish.
+Add a couple of drops of this liquid to the water while you're setting up
+the tank and all the nastiness will be neutralized.
+pH Test Kit	In addition to the stuff in the water, the water itself can be
+hazardous to the fishies if it's too acidic or basic. A test kit is
+necessary to figure out what sort of water you're dealing with. If you find
+the tank water's too acidic or basic, a counteragent can be purchased that
+will raise or lower the pH a smidge as necessary.
+Tchochkes	Okay, the plants give the tank ambiance, sure the action toys are
+fun, but they also promote healthy fish in that they give the fishies a
+place to hide when they're stressed out. You should have a plant in there,
+at the very least.
+The one obvious aquarium gizmo I've left off this list is a tank heater.
+The thing is, they just don't make 'em small enough for a two-gallon tank
+like the MacQuarium, and so just about any heater you put in there will
+quickly result in a visit from Morpheus' elder sister, if you catch my
+drift, and even if you don't I could hardly be made to care less. I mean if
+you can't catch my references then it's your own lookout.
+As you can guess, it's this category that eats the most out of the
+MacQuarium budget; expect to shell out at least twenty bucks for all these
+accessories, more if you have a penchant for extra toys and such.
+
+7	Setting Up The MacQuarium
+With all due respect to Guy Kawasaki, forget about all that "The Journey Is
+The Reward" crap; the journey is a long process of spending money and
+building stuff and the reward is a funky, unique MacQuarium housing your
+fishy friends. Right now, you're a nine-iron away from being done. That is,
+a good tee shot put you on the fairway, you hit a gentle five-iron that put
+you in the rough about eighty yards away from the green, and a nice,
+precise nine iron will put you on the green with a two-putt left for par.
+Be sure, however, to set up the tank slowly and deliberately. More than one
+MacQuarium has been lost because the installer rushed through things, and
+so far as fish in general are concerned omitting important steps in tank
+installation result in dead fish.
+
+Check Components For Fit
+First, fit all the major pieces together to make sure they all fit
+properly. Set the base halfway inside the shell, then set the tank atop the
+base, with their back edges lined up. Gently push the base backward,
+keeping it centered within the shell, until the face of the tank sticks out
+of the shell about a centimeter or so. Align the faceplate of the shell
+over the face of the tank. The tabs around the perimeter of the faceplate
+should fit nicely around the front of the tank. Gently push the faceplate
+and the tank backward until the faceplate is all the way in.
+The key word to keep in mind when manipulating the tank is gently. If you
+failed to cut the handle basket away completely and the ceiling is
+therefore too low, it won't take too much pressure on your part to crack
+the tank, and after all the work you put in it'd be a near-total bummer. If
+you do manage to create a vertical crack, though, all is not lost; paint
+over the crack inside and out with silicone adhesive, let cure, then test
+for watertightness once again.
+If the faceplate just won't go in completely, BACK OFF. Try flipping the
+base over or around. You might find that a slight warp in the wood makes
+the tank fit in flawlessly one way but not at all when the base is turned
+around. Above all, there should NEVER be any reason for you to use any
+force whatsoever in putting the MacQuarium together, dry.
+The tank was designed with plenty of room for error. If you make a small
+mistake in measuring somewhere there's probably enough "give" in the design
+that the tank will fit in anyway. If it doesn't, you'll just have to get
+out the file and chisel and scrape away whatever bits of the shell appear
+to be blocking the tank's progress.
+Once you've determined that the tank and base fit just fine, it's time to
+try out the light (if you've bought one). It's (probably) an electrical
+device and it's going to be quite near water, so you must be absolutely
+certain that wherever it's to be installed, it won't fall in the tank and
+cause trouble. The aforementioned Penn-Plax light will sit snugly in the
+handle well, the lamp below and a perimeter flange sitting above the case
+at all times, and even matches the original Mac Beige rather well. If the
+lamp  is narrow enough to fall through the cutouts, though, you MUST build
+a ledge for the light to sit in by gluing strips of plastic to the ceiling
+of the shell, providing an impenetrable lip inside the well that the light
+CAN'T slip through.
+Please, folks, don't get yourselves killed over a MacQuarium!
+
+Configure Tank
+Now you're ready to start actually setting up the tank. Important
+information follows:
+ONCE THE TANK HAS BEEN FILLED, IT CANNOT BE MOVED!
+First, because it's way too heavy, second because the tank isn't strong
+enough to hold together while being jostled, fully loaded. So Step One is
+to select a permanent spot for the MacQuarium and move everything there.
+Once the tank is filled with water, the whole schmeer will weigh about
+thirty pounds, so make sure whatever the MacQuarium is to sit on can take
+the load. Also, allow for the possibility (however unlikely) of a Normal
+MacQuarium Nominal Transient, which is of course Nuke-speak for Complete
+and Total Failure. DON'T set the MacQuarium right above an expensive
+carpet! Set the shell in its final resting place. Put the empty tank on top
+of the pedestal close by.
+Step Two is to wash your gravel. Out of the bag, the gravel is loaded with
+fine dust, which clouds water and kills fish. Dump the gravel in a deep
+bucket and run it under a strong faucet or hose for five or ten minutes,
+turning the gravel every now and then. Once it's all good and clean, you
+can put it in the tank. You want about two inches of gravel, sloping from
+back to front. This tends to promote good a good water current, and will
+cause your fish to favor the front of the tank.
+Now to put in all the doo-dads that go in the MacQuarium floor. Well, not
+just yet, exactly. Since much of the stuff that goes in the floor needs to
+be hooked up to the pump, it's time to install the air system. Remember,
+the hose goes from the air pump to the gang valve, and from thence to the
+items in the tank. We won't bother with the air pump until we're almost
+finished, so we can just busy ourselves with the gang valve onward.
+Temporarily hang the gang valve off the back of the tank near the center,
+valves pointing outward. For each item (air stone, filter, toy), cut a
+short length of air hose just long enough to reach from wherever you intend
+to put it, to the back of the aquarium, then up the back and into the gang
+valve. Connect each item to the gang valve this way, then embed the item
+into the gravel. On some lighter objects, you may want to try to wire a
+heavy object into the base to keep them from floating.
+Here's what you should have at this point: the tank, on its pedestal near
+the MacQuarium's final resting place; two inches of clean gravel in the
+tank; the gang valve hanging off the back, with air hoses connected to the
+air-powered gizmos which have been embedded in the gravel. You should also
+install the non-air powered props, too (like a ceramic castle, a severed
+hand, etc.).
+Stick the thermometer to the front of the tank, to the left of where the
+disk drive cutout will appear. This way the thermometer won't be visible
+but can be checked simply enough, by removing the front bezel.
+Okay. Now you're ready to start filling the tank. BEFORE YOU DO, move the
+tank and pedestal into the shell. It's helpful to run a length of
+clothesline through the base at this point. When the tank is halfway in,
+you should have enough finger room to lift the gang valve off the tank and
+hook it onto the back of the case. Carefulälift too high and you'll disturb
+everything in the tank.
+Adjusting the tank's proper position in the case is a fiddly job and moving
+the base and tank toward you is difficult without having that rope to pull
+on. As you did during the dry run, adjust the tank and pedestal so that the
+bezel fits cleanly in place and the front glass fits snugly against the
+monitor cutout. The simplest way to accomplish this is to keep the front of
+the tank jutting out of the case, then push the tank in (CAREFULLY and
+EMPTY) with the bezel over it. Again, if you're going to accidently break
+the tank at any point, it's probably going to happen right here so BE
+CAREFUL. You want to do most of your pushing and pulling on the BASE and
+not the tank. If necessary you can push the tank around a bit by putting
+your thumbs near the edges, but as always remember that the edges may be
+sharp.
+With the tank and base shut up inside the tank, you may now fill the tank
+with water through the handle cutout. So as not to create big water
+currents that will disturb the gravel and the stuff embedded within, pour
+the water in through a length of wide tubing or pipe that ends just short
+of the bottom of the tank. Do not fill tank to the very top; stop when the
+water level is halfway up the monitor cutout (you may have to stick your
+hand in to make adjustments, and you don't want to displace water all over
+the desk). Check to see that all your tank stuff is still in place and
+carefully make adjustments if necessary. You may now fill the tank the rest
+of the way.
+If everything has been built and installed to specification, you should be
+able to get the water level just high enough so that no waterline will be
+visible through the monitor cutout. Don't risk over-filling, though; a
+centimeter of dead air in the monitor is better than a centimeter of water
+on your desk!
+Finally, hook up the air pump. You plug a short length of air hose to the
+pump itself, plug the check valve into the hose, then run a liberal amount
+of hose from the check valve to the gang valve. Make sure you install the
+gang valve in the right direction; the "point" should be away from the
+pump.
+Plug in the pump. There's no on/off switch, so it'll start up immediately.
+Adjust each individual valve in the gang until each device hooked up
+thereto is getting a supply of air (that is, bubbles coming out of the
+filter and airstone, little pirate chest flaps up and down or whatever).
+Okay! Now nothing more than busy work. Let the system run for a couple of
+hours to let things settle down a bit, then add water conditioner as
+recommended in the package's directions. Test the pH according to package
+directions, and add pH-Up or pH-Down (available in small bottles) to bring
+the pH close to neutral 7. Better to err on the side of acidic rather than
+basic.
+This is important: let the system sit for the rest of the day, to allow the
+water to assimilate the chemicals you just dumped in and to reach room
+temperature. Do a final pH check and you're ready to add some fish!
+
+Finally! Actual Fish!
+I've waited until now to reveal the awful truth: the best sort of fish for
+the MacQuarium are goldfish. Goldfish are very hardy, and aren't as
+sensitive to temperature changes as tropical (read: Much more colorful and
+interesting) fish are. Goldfish are work horses, alove because they know
+how to live, dammit, while the flashier tropicals are lap dogs who'd keel
+over if you so much as looked at one funny. Good riddance to 'em. Goldfish
+are available in many different varieties, so it's not much of a loss.
+The second awful truth is that, being a two-gallon tank, the MacQuarium
+cannot support huge, teeming schools of fish that one might hope for. The
+fewer fish you put in there, the healthier those fish will be. One goldfish
+of any reasonable size (non-leviathan) is just fine, two shouldn't cause
+any problems so long as they're not that big, but three is really pushing
+it. Start off with one fish, then add another in a week or two after the
+first has become acclimatized to its new environment.
+The actual Adding The Fish procedure is simple. You'll take the fish home
+in a plastic bag. With most aquariums, you'd want to float thebag in the
+water to allow the fish to get used to the temperature change, then cut the
+bag away, but unfortunately there might not be room through the handle
+cutout for that. So long as the two water temperatures are reasonably
+close, there probably won't be a problem. The best solution, before buying
+the fish, is to set out a deep bowl of water nearby, allow it to reach room
+temp, then float the fish bag there. After a half hour or so, transfer the
+fish to the MacQuarium by cutting open the bag and pouring the fish in.
+Contrary to belief, this is much less stressful to the little dear than
+scooping it out of the water with a net and then dropping it in.
+The leading cause of death in newly-added fish is the stress of the move.
+As such, keep the lights out for a day or so as the fish becomes used to
+the unfamiliar water. After a week or so, you may add a second fish.
+
+8	A Vague Education on Elementary Fishery And the Upkeep of our Gilled and
+Scaled Brethren
+Time to pay the piper. The respect, the admiration, the increased attention
+from all members of whatever appropriate target gender is for you; it all
+comes at a price, that is, the day to day and week to week upkeep of your
+finny friends.
+
+Feeding
+Goldfish should be fed twice a day. Give em a single shake of food in the
+morning, another shake at night. Don't overfeed em as that makes em go
+belly-up. Remember that you're feeding the fish, not the tank.
+For variety, give em some brine shrimp every once in a while, perhaps as
+reward for performing a trick like fetching the paper or not appearing to
+be dead.
+
+Lighting
+Try to create an artificial sense of day and night if at all possible.
+Don't leave the light on all the time, as it does generate some heat and
+might result in your waking up one morning to find two gallons of chowder
+on your desktop.
+And the worst part of 'em all;
+
+Cleaning
+Chop off the head and tail. With a sharp filleting knife, make an incision
+behind the gills and slice longitudinally along the dorsal, following the
+backboneäoh, not that kind of cleaning, how silly of me.
+The thing is, and it's an unpleasant thing, but hey this isn't for
+publication so I can say it, but nonetheless those of you with weaker
+constitutions may want to lash yourself around the neck or whatever it is
+you people do when about to face phrases like the following: fish live in
+their own toilets. Honestly, they're like pigs, only it takes much longer
+to fillet a pig. As such, unless you want to have a tank full of dense,
+smelly liquid (not to mention dead fish) clean your tank regularly.
+For starters, change half the water in your tank every week. Dip or siphon
+it off and replace it with room-temperature water. When you've replaced the
+water, fill up another jug so by the time you next do a water change,
+you'll have some water of proper temp all set to go. Fail to do this and
+the water will become so polluted with the fishies' own waste that they'll
+learn how to float right quick.
+Second, vacuum the gravel once a month. You can buy a simple siphon-like
+device which will such up all the residue that collects at the bottom of
+the tank (and believe me, until the tank ecosystem is firmly established,
+stuff will collect). Fail to do this and the residue will congeal into
+gunk, which is harder to remove and smells awful. Just plain horrible.
+Third, every other month you should completely empty the tank, scrub it
+down with cloths and warm water (NO soap), and replace the gravel. It's a
+big job, and you'll have to keep your fish in the toilet bowl until you're
+done (joke), but it's worth it in terms of Having A Pleasant, Non-Smelly
+Tank For A Very Long Time.
+For this and many more reasons, you might want to build a second, backup
+tank. Speaking personally, it's much simpler to have another, spotlessly
+clean MacQuarium all set up and ready to receive the transported fish, then
+take your time cleaning the first one.
+Appendix: Abbreviated Directions
+This appendix is here so you can have a concise step-by-step list of what
+you have to do right at your elbow once you're ready to do it. This appendix
+is NOT an alternative to reading the entire document; the list leaves out
+many small but crucial details that could very well spell disaster in eight
+different flavors.
+1)	Remove everything non-plastic from the Macintosh shell.
+2)	Remove the front bezel. File/saw down posts and fittings.
+3)	Saw out handle basket from back of shell. Smooth down rough edges.
+4)	Test glass for correct size and fit.
+5)	Assemble tank with silicone adhesive. Let stand at least 24 hours.
+Waterseal all interior edges with thick bead of silicone. Let stand at
+least 48 hours.
+6)	Build platform.
+7)	Test tank for leaks.
+8)	Test-fit tank and platform inside closed shell.
+9)	Wash gravel.
+10)	Move MacQuarium pieces to final resting place. Fill with gravel.
+11)	Attach air hoses to in-aquarium items. Plug hoses into gang valve.
+12)	Embed in-aquarium items in gravel.
+13)	Close up semi-configured tank and platform inside shell. Move gang
+valve to hang off back of shell.
+14)	Fill tank with water halfway. Check to see that aquarium items'
+placement hasn't been disturbed, then fill rest of way.
+15)	Connect air pump to check valve, check valve to gang valve, and plug in
+air pump. Adjust flow of air to individual items with valves.
+16)	Let system settle down, then add water conditioner, test and correct pH.
+17)	Let system rest for a day before adding fish one at a time.
+
+
+
+
+
+
+
+
+Colophon
+Each page in this document is a hand-painted 300 dpi bitmap executed by
+Andy Ihnatko in a process far to technical to describe here, but trust me
+it was pretty darn hard. The fonts Andy tried to mimic were Zapf Dingbats,
+Palatino, and Helvetica.
+
+
+
